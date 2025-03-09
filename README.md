@@ -13,6 +13,7 @@ O projeto visa ser um site para um hotel, permitindo a reserva de quartos e even
 * Beatriz Maria Fagundes Oliveira
 * João Victor Silva Farchi
 * Lucas Filipe Santos Lima
+* Markus Antonio Machel
 * Ricardo Gaede Nogueira
 * Sarah Cesar Martins dos Santos
 
