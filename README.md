@@ -1,4 +1,4 @@
-# Título do Projeto
+# Golden Horizon
 
 `CURSO: Sistemas de Informação`
 
