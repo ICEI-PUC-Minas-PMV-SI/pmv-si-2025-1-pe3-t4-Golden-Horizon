@@ -30,14 +30,22 @@ O SCCA não fornece nenhuma forma de avaliação de alunos, pagamento de parcela
 ### 3.3.1 Requisitos Funcionais
 
 | Código | Requisito Funcional (Funcionalidade) | Descrição |
-|--------------------|------------------------------------|----------------------------------------|
-| RF1 | Gerenciar Reservas |Processamento de Inclusão, Alteração, Exclusão e Consulta de reservas de quartos. O sistema deve permitir a visualização da disponibilidade de quartos em tempo real. |
-| RF2 | Gerenciar Hóspedes | Processamento de Inclusão, Alteração, Exclusão e Consulta de dados dos hóspedes, incluindo informações pessoais, preferências e histórico de hospedagem. O sistema deve permitir que os hóspedes atualizem seus dados via portal online. |
-| RF3 | Gerenciar Pagamentos | Processamento de transações financeiras, incluindo pagamentos, recibos e comprovantes. |
-| RF4 | Gerenciar Quartos | Monitoramento e atualização do status dos quartos (disponível, ocupado, em manutenção). O sistema deve permitir a atribuição de quartos durante o check-in e a liberação automática após o check-out. |
-| RF5 | Gerenciar Relatórios | Geração de relatórios de desempenho (taxa de ocupação, diária média, RevPAR). |
-| RF6 | Gerenciar Serviços Adicionais | Processamento de Inclusão, Alteração, Exclusão e Consulta de serviços extras (ex.: café da manhã, traslado, spa). O sistema deve permitir a cobrança automática desses serviços na conta do hóspede. |
-
+|--------|---------------------|-----------|
+| RF01   | GERENCIAR RESERVAS  | Permitir inclusão, alteração, exclusão e consulta de reservas, levando em consideração regras definidas pelo hotel como prazo mínimo e multas. O sistema deve exibir a disponibilidade de quartos em tempo real e evitar conflitos de reserva. |
+| RF02   | GERENCIAR HÓSPEDES  | Cadastrar, editar, excluir e consultar dados dos hóspedes. O sistema deve armazenar preferências e histórico e permitir atualização pelo portal do hóspede. |
+| RF03   | GERENCIAR PAGAMENTOS | Controlar pagamentos, recibos e status financeiro. Deve permitir diferentes formas de pagamento e geração de comprovantes. |
+| RF04   | GERENCIAR ACOMODAÇÕES | Atualizar o status das acomodações (disponível, ocupado, manutenção) e permitir sua consulta. Deve permitir atribuição e liberação automática com base no check-in/check-out. |
+| RF05   | GERENCIAR RELATÓRIOS | Permitir a geração de relatórios de desempenho do hotel, como taxa de ocupação, diária média, receita por tipo de quarto (RevPAR) e avaliação dos hóspedes. Exibir dados gerenciais em tempo real no painel do gerente. |
+| RF06   | GERENCIAR SERVIÇOS ADICIONAIS | Permitir o cadastro e controle de serviços extras (ex: café da manhã, spa, traslado) com cobrança automática junto à fatura da reserva. |
+| RF07   | AVALIAR ESTADIA | Permitir que hóspedes avaliem as acomodações e serviços após o check-out com notas e comentários. |
+| RF08   | ENVIAR COMUNICAÇÕES | Enviar e-mails automáticos para confirmar reservas, cancelamentos, check-ins, check-outs e lembretes. |
+| RF09   | GERENCIAR ENTRADA E SAÍDA | Atualizar o status das reservas com base no início e fim da estadia do hóspede e permitir ao hóspede realizar o check-in ou check-out online. |
+| RF10   | IMPLEMENTAR PERFIS DE USUÁRIO | O sistema deve permitir diferentes níveis de acesso: administrador, gerente, recepcionista e hóspede, cada um com permissões e painéis específicos. |
+| RF11   | GERENCIAR PACOTES E PROMOÇÕES | Permitir a criação, edição, exclusão e consulta de pacotes especiais e promoções com descontos, períodos válidos e condições específicas de reserva. |
+| RF12   | GERENCIAR SERVIÇOS DO HOTEL | Exibir e gerenciar todos os serviços oferecidos pelo hotel, como lavanderia, academia e sala de eventos, junto com seus valores e condições, permitindo ativação ou desativação conforme disponibilidade. |
+| RF13   | APRESENTAR INFORMAÇÕES SOBRE O HOTEL | Apresentar uma seção com informações institucionais e úteis do hotel, como localização, história, horários de check-in/out e políticas gerais. |
+| RF14   | EXIBIR GALERIA DE FOTOS | Exibir imagens do hotel, quartos, áreas comuns, eventos e serviços em uma galeria visualmente atrativa e organizada por categorias. |
+| RF15   | APRESENTAR GASTRONOMIA | Mostrar os restaurantes disponíveis no hotel, horários de funcionamento e cardápio com descrição de pratos e preços. |
 ### 3.3.2 Requisitos Não Funcionais
 
 | Código | Requisito Não Funcional (Restrição) |
