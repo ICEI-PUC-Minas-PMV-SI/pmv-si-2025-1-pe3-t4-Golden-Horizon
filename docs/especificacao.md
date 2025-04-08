@@ -3,27 +3,27 @@
 Nesta parte do trabalho você deve detalhar a documentação dos requisitos do sistema proposto de acordo com as seções a seguir. Ressalta-se que aqui é utilizado como exemplo um sistema de gestão de cursos de aperfeiçoamento.
 
 ## 3.1 Objetivos deste documento
-Descrever e especificar as necessidades da Coordenação do Curso de Sistemas de Informação da PUC Minas que devem ser atendidas pelo projeto SCCA – Sistema de Cadastro de Cursos de Aperfeiçoamento.
+Descrever e especificar as necessidades dos usuários e dos processos administrativos e operacionais de um hotel que devem ser atendidas pelo projeto Sistema de Gestão Hoteleira.
 
 ## 3.2 Escopo do produto
 
 ### 3.2.1 Nome do produto e seus componentes principais
-O produto será denominado SCCA – Sistema de Cadastro de Cursos de Aperfeiçoamento. Ele terá somente um componente (módulo) com os devidos elementos necessários à gestão de cursos.
+O produto será denominado Golden Horizon – Sistema de Gestão Hoteleira. Ele será composto por seis componentes (módulos), contendo os elementos necessários para a reserva de quartos e espaços para eventos, bem como para a gestão de hospedagens e de clientes.
 
 ### 3.2.2 Missão do produto
-Gerenciar informações sobre a oferta de cursos de aperfeiçoamento, gerenciar a composição das turmas, alunos, professores e matrículas. 
+Gerenciar informações relativas aos hóspedes e às suas hospedagens, à oferta de quartos e espaços para eventos, bem como às reservas de hospedagens para usuários cadastrados, com o objetivo de facilitar o atendimento ao cliente, tornando o processo remoto e digital. 
 
 ### 3.2.3 Limites do produto
-O SCCA não fornece nenhuma forma de avaliação de alunos, pagamento de parcelas do curso, pagamento a professore e agendamentos. O SCCA não contempla o atendimento a vários cursos de Sistemas de Informação de outras unidades da PUC Minas.
+O Sistema de Gestão Hoteleira não contempla funcionalidades relacionadas à atualização do software a longo prazo, à gestão financeira ou ao processamento da folha de pagamento dos colaboradores. Além disso, o sistema não oferece suporte à administração simultânea de múltiplas unidades hoteleiras.
 
 ### 3.2.4 Benefícios do produto
 
 | # | Benefício | Valor para o Cliente |
 |--------------------|------------------------------------|----------------------------------------|
-|1 | Facilidade no cadastro de dados | Essencial |
-|2 | Facilidade na recuperação de informações | Essencial | 
-|3 | Segurança no cadastro de matrículas | Essencial | 
-|4 | Melhoria na comunicação com os alunos | Recomendável | 
+|1 | Facilidade nos gerenciamentos de dados | Essencial |
+|2 | Facilidade na reserva de hospedagem | Essencial | 
+|3 | Segurança no cadastro de usuários | Essencial | 
+|4 | Melhoria na agilidade do atendimento ao cliente | Essencial | 
 
 ## 3.3 Descrição geral do produto
 
@@ -46,86 +46,192 @@ O SCCA não fornece nenhuma forma de avaliação de alunos, pagamento de parcela
 | RF13   | APRESENTAR INFORMAÇÕES SOBRE O HOTEL | Apresentar uma seção com informações institucionais e úteis do hotel, como localização, história, horários de check-in/out e políticas gerais. |
 | RF14   | EXIBIR GALERIA DE FOTOS | Exibir imagens do hotel, quartos, áreas comuns, eventos e serviços em uma galeria visualmente atrativa e organizada por categorias. |
 | RF15   | APRESENTAR GASTRONOMIA | Mostrar os restaurantes disponíveis no hotel, horários de funcionamento e cardápio com descrição de pratos e preços. |
+
 ### 3.3.2 Requisitos Não Funcionais
 
 | Código | Requisito Não Funcional (Restrição) |
 |--------------------|------------------------------------|
 | RNF1   | O sistema deverá executar em qualquer navegador para dispositivos móveis ou desktop. |
 | RNF2   | O produto deve restringir o acesso por meio de senhas individuais para o usuário. |
+| RNF3   | O sistema deve ser capaz de processar até 100 reservas simultâneas sem queda de desempenho. |
+| RNF4   | A interface do usuário deve ser intuitiva e acessível, permitindo que o cliente realize uma reserva em no máximo 5 cliques. |
+| RNF5   | O sistema deve ter uma disponibilidade mínima de 99,5% mensal. |
+| RNF6   | O sistema deve permitir o aumento de capacidade (usuários e dados) sem necessidade de reescrever o código. |
+| RNF7   | O site deve funcionar corretamente nos principais navegadores (Chrome, Firefox, Edge, Safari). |
+| RNF8   | O código-fonte do sistema deve seguir boas práticas de desenvolvimento, com comentários e documentação para facilitar futuras manutenções. |
+| RNF9   | Todas as ações do administrador (edições de hóspedes, alterações de reservas, etc.) devem ser registradas em logs acessíveis apenas por usuários autorizados. |
 
 ### 3.3.3 Usuários 
 
 | Ator | Descrição |
 |--------------------|------------------------------------|
-| Coordenador | Usuário gerente do sistema responsável pelo cadastro e manutenção de cursos de aperfeiçoamento. Possui acesso geral ao sistema. |
-| Secretaria | Usuário responsável por registros de alunos, professores, turmas e gerência de matrículas. |
-| ... | ... | ... |
+| Administrador | Usuário com acesso total ao sistema, responsável pela gestão completa das hospedagens, hóspedes, eventos e quartos. Pode visualizar relatórios, cadastrar ou editar informações do hotel e gerenciar outros usuários do sistema interno. |
+| Recepcionista | Usuário responsável pelo registro de hóspedes, check-in/check-out, atualização de reservas e suporte aos hóspedes no sistema. Pode acessar dados de contato dos hóspedes, visualizar e alterar status das hospedagens e conferir disponibilidade dos quartos. |
+| Cliente (Hóspede) | Usuário final que acessa o site para visualizar informações sobre o hotel, quartos, eventos e contato. Pode realizar cadastro/login, agendar hospedagens e acompanhar o status da reserva. |
 
 ## 3.4 Modelagem do Sistema
 
 ### 3.4.1 Diagrama de Casos de Uso
-Como observado no diagrama de casos de uso da Figura 1, a secretária poderá gerenciar as matrículas e professores no sistema, enquanto o coordenador, além dessas funções, poderá gerenciar os cursos de aperfeiçoamento.
+Como observado no diagrama de casos de uso da Figura 1, a recepcionista poderá gerenciar os dados de hóspedes no sistema, enquanto o administrador, além dessas funções, poderá gerenciar os quartos e eventos. E os clientes terão acesso ao cadastro e solicitação de hospedagem.
 
 #### Figura 1: Diagrama de Casos de Uso do Sistema.
 
-![dcu](https://github.com/user-attachments/assets/41f6b731-b44e-43aa-911f-423ad6198f47)
+![dcu](https://uploaddeimagens.com.br/images/004/890/461/original/WhatsApp_Image_2025-04-07_at_19.19.38.jpeg?1744069411)
  
 ### 3.4.2 Descrições de Casos de Uso
 
-Cada caso de uso deve ter a sua descrição representada nesta seção. Exemplo:
+#### Gerenciar Recepcionista (CSU01)
 
-#### Gerenciar Professor (CSU01)
+Sumário: O Recepcionista realiza a gestão (inclusão, remoção, alteração e consulta) dos dados dos hóspedes.
 
-Sumário: A Secretária realiza a gestão (inclusão, remoção, alteração e consulta) dos dados sobre professores.
+Ator Primário: Recepcionista.
 
-Ator Primário: Secretária.
+Ator Secundário: Administrador.
 
-Ator Secundário: Coordenador.
-
-Pré-condições: A Secretária deve ser validada pelo Sistema.
+Pré-condições: O Recepcionista deve estar autenticado no sistema.
 
 Fluxo Principal:
 
-1)  A Secretária requisita manutenção de professores.
-2)  O Sistema apresenta as operações que podem ser realizadas: inclusão de um novo professor, alteração de um professor, a exclusão de um professor e a consulta de dados de um professor.
-3)  A Secretária seleciona a operação desejada: Inclusão, Exclusão, Alteração ou Consulta, ou opta por finalizar o caso de uso.
-4)  Se a Secretária desejar continuar com a gestão de professores, o caso de uso retorna ao passo 2; caso contrário o caso de uso termina.
+1)  O Recepcionista requisita a manutenção de hóspedes. 
+2)  O Sistema apresenta as operações disponíveis: inclusão de um novo hóspede, alteração de dados, exclusão de hóspede e consulta de informações. 
+3)  O Recepcionista seleciona a operação desejada: Inclusão, Exclusão, Alteração ou Consulta, ou opta por finalizar o caso de uso. 
+4)  Se o Recepcionista desejar continuar com a gestão de hóspedes, o caso de uso retorna ao passo 2; caso contrário, o caso de uso termina. 
 
 Fluxo Alternativo (3): Inclusão
 
-a) A Secretária requisita a inclusão de um professor. <br>
-b) O Sistema apresenta uma janela solicitando o CPF do professor a ser cadastrado. <br>
-c) A Secretária fornece o dado solicitado. <br>
-d) O Sistema verifica se o professor já está cadastrado. Se sim, o Sistema reporta o fato e volta ao início; caso contrário, apresenta um formulário em branco para que os detalhes do professor (Código, Nome, Endereço, CEP, Estado, Cidade, Bairro, Telefone, Identidade, Sexo, Fax, CPF, Data do Cadastro e Observação) sejam incluídos. <br>
-e) A Secretária fornece os detalhes do novo professor. <br>
-f) O Sistema verifica a validade dos dados. Se os dados forem válidos, inclui o novo professor e a grade listando os professores cadastrados é atualizada; caso contrário, o Sistema reporta o fato, solicita novos dados e repete a verificação. <br>
+ 3.1 O Recepcionista requisita a inclusão de um novo hóspede. 
+ 3.2 O Sistema apresenta um campo solicitando o CPF do hóspede a ser cadastrado. 
+ 3.3 O Recepcionista fornece o CPF. 
+ 3.4 O Sistema verifica se o hóspede já está cadastrado. 
+     ↳ Se sim, o sistema informa que o hóspede já existe e retorna ao passo 2. 
+     ↳ Se não, apresenta um formulário em branco com os campos: Nome, CPF, Telefone, E-mail, Endereço, Cidade, Estado, CEP, Data de Nascimento, Observações. 
+ 3.5 O Recepcionista preenche os dados solicitados. 
+ 3.6 O Sistema valida os dados inseridos. 
+     ↳ Se os dados forem válidos, o hóspede é cadastrado e a lista de hóspedes é atualizada. 
+     ↳ Caso contrário, o Sistema reporta o erro, solicita correções e repete a verificação. 
 
 Fluxo Alternativo (3): Remoção
 
-a) A Secretária seleciona um professor e requisita ao Sistema que o remova. <br>
-b) Se o professor pode ser removido, o Sistema realiza a remoção; caso contrário, o Sistema reporta o fato. <br>
+ 3.1 O Recepcionista seleciona um hóspede da lista. 
+ 3.2 O Recepcionista requisita a exclusão do hóspede. 
+ 3.3 O Sistema verifica se a exclusão é permitida (ex: sem reservas ativas). 
+     ↳ Se sim, realiza a exclusão. 
+     ↳ Se não, informa que o hóspede não pode ser removido. 
 
 Fluxo Alternativo (3): Alteração
 
-a) A Secretária altera um ou mais dos detalhes do professor e requisita sua atualização. <br>
-b) O Sistema verifica a validade dos dados e, se eles forem válidos, altera os dados na lista de professores, caso contrário, o erro é reportado. <br>
+ 3.1 O Recepcionista seleciona um hóspede. 
+ 3.2 O Sistema apresenta os dados cadastrados. 
+ 3.3 O Recepcionista edita os campos desejados. 
+ 3.4 O Sistema valida os novos dados. 
+     ↳ Se válidos, os dados são atualizados. 
+     ↳ Caso contrário, o Sistema reporta o erro. 
  
 Fluxo Alternativo (3): Consulta
 
-a) A Secretária opta por pesquisar pelo nome ou código e solicita a consulta sobre a lista de professores. <br>
-b) O Sistema apresenta uma lista professores. <br>
-c) A Secretária seleciona o professor. <br>
-d) O Sistema apresenta os detalhes do professor no formulário de professores. <br>
+ 3.1 O Recepcionista opta por pesquisar um hóspede pelo nome, CPF ou outro critério. 
+ 3.2 O Sistema apresenta uma lista com os resultados. 
+ 3.3 O Recepcionista seleciona um hóspede. 
+ 3.4 O Sistema exibe os dados detalhados do hóspede. 
 
-Pós-condições: Um professor foi inserido ou removido, seus dados foram alterados ou apresentados na tela.
+Pós-condições: Um hóspede foi inserido ou removido do sistema, seus dados foram atualizados ou apresentados em tela para consulta. 
+
+#### Realizar Cadastro (CSU02) 
+
+Sumário: O Hóspede realiza seu cadastro na plataforma para poder efetuar reservas e acessar seu histórico. 
+
+Ator Primário: Hóspede 
+
+Pré-condições: O hóspede acessa o site e opta por criar uma conta. 
+
+Fluxo Principal: 
+
+1) O hóspede clica em "Cadastrar". 
+2) O sistema apresenta um formulário com campos obrigatórios (nome, e-mail, telefone, CPF, senha). 
+3) O hóspede preenche e envia o formulário. 
+4) O sistema valida os dados, cria o perfil e exibe mensagem de sucesso. 
+
+Pós-condições: O hóspede tem uma conta ativa na plataforma.
+
+### Gerenciar Quartos (CSU03) 
+
+Sumário: O Administrador realiza a gestão dos quartos disponíveis no hotel, podendo incluir, remover, alterar ou consultar os dados dos quartos. 
+
+Ator Primário: Administrador. 
+
+Ator Secundário: Recepcionista (com acesso somente de consulta). 
+
+Pré-condições: O Administrador deve estar autenticado no sistema com permissões adequadas. 
+
+Fluxo Principal: 
+
+1) O Administrador requisita a manutenção dos quartos. 
+2) O Sistema apresenta as operações disponíveis: inclusão de novo quarto, alteração, exclusão e consulta de informações. 
+3) O Administrador seleciona a operação desejada: Inclusão, Exclusão, Alteração ou Consulta, ou opta por finalizar o caso de uso. 
+4) Se o Administrador desejar continuar com a gestão de quartos, o caso de uso retorna ao passo 2; caso contrário, o caso de uso é encerrado. 
+
+Fluxo Alternativo (3): Inclusão 
+
+ 3.1 O Administrador requisita a inclusão de um novo quarto. 
+ 3.2 O Sistema solicita o número do quarto a ser cadastrado. 
+ 3.3 O Administrador fornece o número. 
+ 3.4 O Sistema verifica se o quarto já está cadastrado. 
+     ↳ Se sim, informa que o número já está em uso e retorna ao passo 2. 
+     ↳ Se não, apresenta um formulário em branco com os campos: Número, Tipo (ex: solteiro, casal, luxo), Capacidade, Preço da Diária, Descrição, Status (Disponível, Ocupado, Em manutenção), Observações. 
+ 3.5 O Administrador preenche os dados. 
+ 3.6 O Sistema valida os dados. 
+     ↳ Se forem válidos, o novo quarto é cadastrado e a lista atualizada. 
+     ↳ Caso contrário, o sistema informa o erro e solicita correção. 
+
+Fluxo Alternativo (3): Remoção 
+
+ 3.1 O Administrador seleciona um quarto da lista. 
+ 3.2 O Sistema verifica se o quarto está disponível e sem reservas futuras. 
+     ↳ Se sim, realiza a exclusão. 
+     ↳ Se não, informa que o quarto não pode ser removido. 
+
+Fluxo Alternativo (3): Alteração 
+
+ 3.1 O Administrador seleciona um quarto. 
+ 3.2 O Sistema exibe os dados cadastrados. 
+ 3.3 O Administrador altera os dados desejados. 
+ 3.4 O Sistema valida os dados. 
+     ↳ Se forem válidos, realiza a atualização. 
+     ↳ Caso contrário, informa o erro. 
+
+Fluxo Alternativo (3): Consulta 
+
+ 3.1 O Administrador opta por pesquisar um quarto pelo número, tipo ou status. 
+ 3.2 O Sistema apresenta os resultados em uma lista. 
+ 3.3 O Administrador seleciona um quarto. 
+ 3.4 O Sistema exibe os dados detalhados do quarto. 
+
+Pós-condições: Um quarto foi inserido, removido, alterado ou visualizado no sistema com sucesso. 
+
+### Efetuar Reserva Online (CSU04) 
+
+Sumário: O hóspede logado realiza uma reserva de hospedagem pelo site. 
+
+Ator Primário: Hóspede. 
+
+Pré-condições: O hóspede precisa estar cadastrado e autenticado.  
+
+Fluxo Principal: 
+1) O hóspede acessa a página de reservas. 
+2) Seleciona as datas de entrada e saída. 
+3) O sistema exibe os quartos disponíveis. 
+4) O hóspede escolhe o quarto e confirma a reserva. 
+5) O sistema registra a reserva e exibe os dados. 
+
+Pós-condições: A reserva é registrada no sistema. 
 
 ### 3.4.3 Diagrama de Classes 
 
-A Figura 2 mostra o diagrama de classes do sistema. A Matrícula deve conter a identificação do funcionário responsável pelo registro, bem com os dados do aluno e turmas. Para uma disciplina podemos ter diversas turmas, mas apenas um professor responsável por ela.
+A Figura 2 mostra o diagrama de classes do sistema. A Matrícula deve conter a identificação do funcionário responsável pelo registro, bem com os dados do aluno e turmas. Para uma disciplina podemos ter diversas turmas, mas apenas um professor responsável por ela. 
 
 #### Figura 2: Diagrama de Classes do Sistema.
  
-![image](https://github.com/user-attachments/assets/abc7591a-b46f-4ea2-b8f0-c116b60eb24e)
+![image](https://uploaddeimagens.com.br/images/004/890/476/original/WhatsApp_Image_2025-04-07_at_18.33.31.jpeg?1744070282)
 
 
 ### 3.4.4 Descrições das Classes 
