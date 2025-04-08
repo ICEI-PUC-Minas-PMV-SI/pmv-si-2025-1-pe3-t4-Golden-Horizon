@@ -227,7 +227,7 @@ Pós-condições: A reserva é registrada no sistema.
 
 ### 3.4.3 Diagrama de Classes 
 
-A Figura 2 mostra o diagrama de classes do sistema. A Matrícula deve conter a identificação do funcionário responsável pelo registro, bem com os dados do aluno e turmas. Para uma disciplina podemos ter diversas turmas, mas apenas um professor responsável por ela. 
+A Figura 2 mostra o diagrama de classes do sistema. O diagrama de classes do sistema Golden Horizon contém identificação do hóspede e informações da acomodação, além de estar vinculada ao pagamento correspondente. Cada serviço adicional pode ser associado à reserva, assim como as avaliações feitas pelos hóspedes. O administrador é responsável pela geração dos relatórios gerenciais, enquanto o usuário do tipo funcionário pode atuar nas operações do sistema conforme o seu nível de permissão. 
 
 #### Figura 2: Diagrama de Classes do Sistema.
  
@@ -238,9 +238,13 @@ A Figura 2 mostra o diagrama de classes do sistema. A Matrícula deve conter a i
 
 | # | Nome | Descrição |
 |--------------------|------------------------------------|----------------------------------------|
-| 1 | Aluno | Cadastro de informações relativas aos alunos. |
-| 2 | Curso | Cadastro geral de cursos de aperfeiçoamento. |
-| 3 | Matrícula | Cadastro de Matrículas de alunos nos cursos. |
-| 4 | Turma | Cadastro de turmas.
-| 5 | Professor | Cadastro geral de professores que ministram as disciplinas. |
-| ... | ... | ... |
+| 1 | Usuário | Classe base para todos os perfis do sistema, contendo dados como nome e e-mail. |
+| 2 | Hóspede | Representa o cliente do hotel, com CPF, preferências e histórico de reservas. |
+| 3 | Funcionário | Usuário que trabalha no hotel, podendo exercer funções operacionais. |
+| 4 | Administrador | Funcionário com permissões administrativas e acesso a relatórios gerenciais. |
+| 5 | Acomodação | Cadastro dos quartos do hotel, contendo número, tipo e status de ocupação. |
+| 6 | Reserva | Registra a estadia do hóspede, incluindo datas, valor total e status. |
+| 7 | Pagamento | Controla os pagamentos realizados, com forma, valor e status financeiro. |
+| 8 | Serviço | Cadastro de serviços adicionais oferecidos, como café da manhã e spa. |
+| 9 | Avaliação | Registro das avaliações feitas pelos hóspedes após a estadia. |
+| 10 | Relatório | Geração de relatórios administrativos, como taxa de ocupação e receita média. |
