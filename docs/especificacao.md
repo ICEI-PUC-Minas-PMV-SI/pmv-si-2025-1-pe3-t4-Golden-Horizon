@@ -99,40 +99,40 @@ Fluxo Principal:
 
 Fluxo Alternativo (3): Inclusão
 
- 3.1 O Recepcionista requisita a inclusão de um novo hóspede. 
- 3.2 O Sistema apresenta um campo solicitando o CPF do hóspede a ser cadastrado. 
- 3.3 O Recepcionista fornece o CPF. 
- 3.4 O Sistema verifica se o hóspede já está cadastrado. 
-     ↳ Se sim, o sistema informa que o hóspede já existe e retorna ao passo 2. 
-     ↳ Se não, apresenta um formulário em branco com os campos: Nome, CPF, Telefone, E-mail, Endereço, Cidade, Estado, CEP, Data de Nascimento, Observações. 
- 3.5 O Recepcionista preenche os dados solicitados. 
- 3.6 O Sistema valida os dados inseridos. 
-     ↳ Se os dados forem válidos, o hóspede é cadastrado e a lista de hóspedes é atualizada. 
-     ↳ Caso contrário, o Sistema reporta o erro, solicita correções e repete a verificação. 
+ 3.1 - O Recepcionista requisita a inclusão de um novo hóspede. <br>
+ 3.2 - O Sistema apresenta um campo solicitando o CPF do hóspede a ser cadastrado. <br>
+ 3.3 - O Recepcionista fornece o CPF. <br>
+ 3.4 - O Sistema verifica se o hóspede já está cadastrado. <br>
+     ↳ Se sim, o sistema informa que o hóspede já existe e retorna ao passo 2. <br>
+     ↳ Se não, apresenta um formulário em branco com os campos: Nome, CPF, Telefone, E-mail, Endereço, Cidade, Estado, CEP, Data de Nascimento, Observações. <br>
+ 3.5 - O Recepcionista preenche os dados solicitados. <br>
+ 3.6 - O Sistema valida os dados inseridos. <br>
+     ↳ Se os dados forem válidos, o hóspede é cadastrado e a lista de hóspedes é atualizada. <br>
+     ↳ Caso contrário, o Sistema reporta o erro, solicita correções e repete a verificação. <br>
 
 Fluxo Alternativo (3): Remoção
 
- 3.1 O Recepcionista seleciona um hóspede da lista. 
- 3.2 O Recepcionista requisita a exclusão do hóspede. 
- 3.3 O Sistema verifica se a exclusão é permitida (ex: sem reservas ativas). 
-     ↳ Se sim, realiza a exclusão. 
-     ↳ Se não, informa que o hóspede não pode ser removido. 
+ 3.1 - O Recepcionista seleciona um hóspede da lista. <br>
+ 3.2 - O Recepcionista requisita a exclusão do hóspede. <br>
+ 3.3 - O Sistema verifica se a exclusão é permitida (ex: sem reservas ativas). <br>
+     ↳ Se sim, realiza a exclusão. <br>
+     ↳ Se não, informa que o hóspede não pode ser removido. <br>
 
 Fluxo Alternativo (3): Alteração
 
- 3.1 O Recepcionista seleciona um hóspede. 
- 3.2 O Sistema apresenta os dados cadastrados. 
- 3.3 O Recepcionista edita os campos desejados. 
- 3.4 O Sistema valida os novos dados. 
-     ↳ Se válidos, os dados são atualizados. 
-     ↳ Caso contrário, o Sistema reporta o erro. 
+ 3.1 - O Recepcionista seleciona um hóspede. <br>
+ 3.2 - O Sistema apresenta os dados cadastrados. <br>
+ 3.3 - O Recepcionista edita os campos desejados. <br>
+ 3.4 - O Sistema valida os novos dados. <br>
+     ↳ Se válidos, os dados são atualizados. <br>
+     ↳ Caso contrário, o Sistema reporta o erro. <br>
  
 Fluxo Alternativo (3): Consulta
 
- 3.1 O Recepcionista opta por pesquisar um hóspede pelo nome, CPF ou outro critério. 
- 3.2 O Sistema apresenta uma lista com os resultados. 
- 3.3 O Recepcionista seleciona um hóspede. 
- 3.4 O Sistema exibe os dados detalhados do hóspede. 
+ 3.1 - O Recepcionista opta por pesquisar um hóspede pelo nome, CPF ou outro critério. <br>
+ 3.2 - O Sistema apresenta uma lista com os resultados. <br>
+ 3.3 - O Recepcionista seleciona um hóspede. <br>
+ 3.4 - O Sistema exibe os dados detalhados do hóspede. <br>
 
 Pós-condições: Um hóspede foi inserido ou removido do sistema, seus dados foram atualizados ou apresentados em tela para consulta. 
 
@@ -172,39 +172,39 @@ Fluxo Principal:
 
 Fluxo Alternativo (3): Inclusão 
 
- 3.1 O Administrador requisita a inclusão de um novo quarto. 
- 3.2 O Sistema solicita o número do quarto a ser cadastrado. 
- 3.3 O Administrador fornece o número. 
- 3.4 O Sistema verifica se o quarto já está cadastrado. 
-     ↳ Se sim, informa que o número já está em uso e retorna ao passo 2. 
-     ↳ Se não, apresenta um formulário em branco com os campos: Número, Tipo (ex: solteiro, casal, luxo), Capacidade, Preço da Diária, Descrição, Status (Disponível, Ocupado, Em manutenção), Observações. 
- 3.5 O Administrador preenche os dados. 
- 3.6 O Sistema valida os dados. 
-     ↳ Se forem válidos, o novo quarto é cadastrado e a lista atualizada. 
-     ↳ Caso contrário, o sistema informa o erro e solicita correção. 
+ 3.1 - O Administrador requisita a inclusão de um novo quarto. <br>
+ 3.2 - O Sistema solicita o número do quarto a ser cadastrado. <br>
+ 3.3 - O Administrador fornece o número. <br>
+ 3.4 - O Sistema verifica se o quarto já está cadastrado. <br>
+     ↳ Se sim, informa que o número já está em uso e retorna ao passo 2. <br>
+     ↳ Se não, apresenta um formulário em branco com os campos: Número, Tipo (ex: solteiro, casal, luxo), Capacidade, Preço da Diária, Descrição, Status (Disponível, Ocupado, Em manutenção), Observações. <br>
+ 3.5 - O Administrador preenche os dados. <br>
+ 3.6 - O Sistema valida os dados. <br>
+     ↳ Se forem válidos, o novo quarto é cadastrado e a lista atualizada. <br>
+     ↳ Caso contrário, o sistema informa o erro e solicita correção. <br>
 
 Fluxo Alternativo (3): Remoção 
 
- 3.1 O Administrador seleciona um quarto da lista. 
- 3.2 O Sistema verifica se o quarto está disponível e sem reservas futuras. 
-     ↳ Se sim, realiza a exclusão. 
-     ↳ Se não, informa que o quarto não pode ser removido. 
+ 3.1 - O Administrador seleciona um quarto da lista. <br>
+ 3.2 - O Sistema verifica se o quarto está disponível e sem reservas futuras. <br>
+     ↳ Se sim, realiza a exclusão. <br>
+     ↳ Se não, informa que o quarto não pode ser removido. <br>
 
 Fluxo Alternativo (3): Alteração 
 
- 3.1 O Administrador seleciona um quarto. 
- 3.2 O Sistema exibe os dados cadastrados. 
- 3.3 O Administrador altera os dados desejados. 
- 3.4 O Sistema valida os dados. 
-     ↳ Se forem válidos, realiza a atualização. 
-     ↳ Caso contrário, informa o erro. 
+ 3.1 - O Administrador seleciona um quarto. <br>
+ 3.2 - O Sistema exibe os dados cadastrados. <br>
+ 3.3 - O Administrador altera os dados desejados. <br>
+ 3.4 - O Sistema valida os dados. <br>
+     ↳ Se forem válidos, realiza a atualização. <br>
+     ↳ Caso contrário, informa o erro. <br>
 
 Fluxo Alternativo (3): Consulta 
 
- 3.1 O Administrador opta por pesquisar um quarto pelo número, tipo ou status. 
- 3.2 O Sistema apresenta os resultados em uma lista. 
- 3.3 O Administrador seleciona um quarto. 
- 3.4 O Sistema exibe os dados detalhados do quarto. 
+ 3.1 - O Administrador opta por pesquisar um quarto pelo número, tipo ou status. <br>
+ 3.2 - O Sistema apresenta os resultados em uma lista. <br>
+ 3.3 - O Administrador seleciona um quarto. <br>
+ 3.4 - O Sistema exibe os dados detalhados do quarto. <br>
 
 Pós-condições: Um quarto foi inserido, removido, alterado ou visualizado no sistema com sucesso. 
 
