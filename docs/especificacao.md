@@ -74,154 +74,178 @@ Como observado no diagrama de casos de uso da Figura 1, a recepcionista poderá 
 
 #### Figura 1: Diagrama de Casos de Uso do Sistema.
 
-![dcu](https://uploaddeimagens.com.br/images/004/890/461/original/WhatsApp_Image_2025-04-07_at_19.19.38.jpeg?1744069411)
+![image](https://github.com/user-attachments/assets/3188df8e-1e29-4656-8ef3-201a7a92eb4c)
  
 ### 3.4.2 Descrições de Casos de Uso
 
-#### Gerenciar Recepcionista (CSU01)
+## Caso de Uso: Gerenciar Reservas
+**Código:** RF01  
+**Atores:** Recepcionista, Hóspede  
+**Descrição:** Permite criar, alterar, excluir e consultar reservas, verificando disponibilidade de quartos em tempo real e aplicando regras do hotel como prazo mínimo e multas.
 
-Sumário: O Recepcionista realiza a gestão (inclusão, remoção, alteração e consulta) dos dados dos hóspedes.
+### Fluxo Principal:
+1. Ator acessa o módulo de reservas.  
+2. Seleciona datas e tipo de quarto.  
+3. Sistema exibe disponibilidade.  
+4. Ator preenche os dados da reserva.  
+5. Sistema valida regras e confirma a operação.
 
-Ator Primário: Recepcionista.
+---
 
-Ator Secundário: Administrador.
+## Caso de Uso: Gerenciar Hóspedes
+**Código:** RF02  
+**Atores:** Recepcionista, Hóspede  
+**Descrição:** Permite cadastrar, editar, excluir e consultar dados dos hóspedes, incluindo histórico e preferências.
 
-Pré-condições: O Recepcionista deve estar autenticado no sistema.
+### Fluxo Principal:
+1. Ator acessa cadastro de hóspedes.  
+2. Insere ou edita dados pessoais.  
+3. Sistema salva ou atualiza o registro.
 
-Fluxo Principal:
+---
 
-1)  O Recepcionista requisita a manutenção de hóspedes. 
-2)  O Sistema apresenta as operações disponíveis: inclusão de um novo hóspede, alteração de dados, exclusão de hóspede e consulta de informações. 
-3)  O Recepcionista seleciona a operação desejada: Inclusão, Exclusão, Alteração ou Consulta, ou opta por finalizar o caso de uso. 
-4)  Se o Recepcionista desejar continuar com a gestão de hóspedes, o caso de uso retorna ao passo 2; caso contrário, o caso de uso termina. 
+## Caso de Uso: Gerenciar Pagamentos
+**Código:** RF03  
+**Atores:** Recepcionista, Hóspede  
+**Descrição:** Controla pagamentos e recibos, permitindo várias formas de pagamento e geração de comprovantes.
 
-Fluxo Alternativo (3): Inclusão
+### Fluxo Principal:
+1. Ator acessa detalhes da reserva.  
+2. Seleciona forma de pagamento.  
+3. Sistema registra e gera comprovante.
 
- 3.1 - O Recepcionista requisita a inclusão de um novo hóspede. <br>
- 3.2 - O Sistema apresenta um campo solicitando o CPF do hóspede a ser cadastrado. <br>
- 3.3 - O Recepcionista fornece o CPF. <br>
- 3.4 - O Sistema verifica se o hóspede já está cadastrado. <br>
-     ↳ Se sim, o sistema informa que o hóspede já existe e retorna ao passo 2. <br>
-     ↳ Se não, apresenta um formulário em branco com os campos: Nome, CPF, Telefone, E-mail, Endereço, Cidade, Estado, CEP, Data de Nascimento, Observações. <br>
- 3.5 - O Recepcionista preenche os dados solicitados. <br>
- 3.6 - O Sistema valida os dados inseridos. <br>
-     ↳ Se os dados forem válidos, o hóspede é cadastrado e a lista de hóspedes é atualizada. <br>
-     ↳ Caso contrário, o Sistema reporta o erro, solicita correções e repete a verificação. <br>
+---
 
-Fluxo Alternativo (3): Remoção
+## Caso de Uso: Gerenciar Acomodações
+**Código:** RF04  
+**Atores:** Recepcionista, Sistema  
+**Descrição:** Atualiza status das acomodações com base em eventos e permite consulta.
 
- 3.1 - O Recepcionista seleciona um hóspede da lista. <br>
- 3.2 - O Recepcionista requisita a exclusão do hóspede. <br>
- 3.3 - O Sistema verifica se a exclusão é permitida (ex: sem reservas ativas). <br>
-     ↳ Se sim, realiza a exclusão. <br>
-     ↳ Se não, informa que o hóspede não pode ser removido. <br>
+### Fluxo Principal:
+1. Sistema atualiza status automaticamente.  
+2. Ator pode consultar ou alterar manualmente.
 
-Fluxo Alternativo (3): Alteração
+---
 
- 3.1 - O Recepcionista seleciona um hóspede. <br>
- 3.2 - O Sistema apresenta os dados cadastrados. <br>
- 3.3 - O Recepcionista edita os campos desejados. <br>
- 3.4 - O Sistema valida os novos dados. <br>
-     ↳ Se válidos, os dados são atualizados. <br>
-     ↳ Caso contrário, o Sistema reporta o erro. <br>
- 
-Fluxo Alternativo (3): Consulta
+## Caso de Uso: Gerar Relatórios
+**Código:** RF05  
+**Atores:** Gerente  
+**Descrição:** Permite gerar relatórios gerenciais com dados em tempo real.
 
- 3.1 - O Recepcionista opta por pesquisar um hóspede pelo nome, CPF ou outro critério. <br>
- 3.2 - O Sistema apresenta uma lista com os resultados. <br>
- 3.3 - O Recepcionista seleciona um hóspede. <br>
- 3.4 - O Sistema exibe os dados detalhados do hóspede. <br>
+### Fluxo Principal:
+1. Gerente seleciona tipo e período.  
+2. Sistema gera relatório com gráficos e indicadores.
 
-Pós-condições: Um hóspede foi inserido ou removido do sistema, seus dados foram atualizados ou apresentados em tela para consulta. 
+---
 
-#### Realizar Cadastro (CSU02) 
+## Caso de Uso: Gerenciar Serviços Adicionais
+**Código:** RF06  
+**Atores:** Recepcionista, Hóspede  
+**Descrição:** Permite adicionar serviços extras à fatura da reserva.
 
-Sumário: O Hóspede realiza seu cadastro na plataforma para poder efetuar reservas e acessar seu histórico. 
+### Fluxo Principal:
+1. Ator seleciona serviços adicionais.  
+2. Sistema inclui serviços e atualiza cobrança.
 
-Ator Primário: Hóspede 
+---
 
-Pré-condições: O hóspede acessa o site e opta por criar uma conta. 
+## Caso de Uso: Avaliar Estadia
+**Código:** RF07  
+**Atores:** Hóspede  
+**Descrição:** Permite ao hóspede avaliar a experiência após o check-out.
 
-Fluxo Principal: 
+### Fluxo Principal:
+1. Sistema envia link de avaliação.  
+2. Hóspede preenche notas e comenta.
 
-1) O hóspede clica em "Cadastrar". 
-2) O sistema apresenta um formulário com campos obrigatórios (nome, e-mail, telefone, CPF, senha). 
-3) O hóspede preenche e envia o formulário. 
-4) O sistema valida os dados, cria o perfil e exibe mensagem de sucesso. 
+---
 
-Pós-condições: O hóspede tem uma conta ativa na plataforma.
+## Caso de Uso: Enviar Comunicações
+**Código:** RF08  
+**Atores:** Sistema  
+**Descrição:** Envia e-mails automáticos relacionados à estadia.
 
-### Gerenciar Quartos (CSU03) 
+### Fluxo Principal:
+1. Sistema identifica evento (reserva, check-in, etc).  
+2. Dispara comunicação correspondente.
 
-Sumário: O Administrador realiza a gestão dos quartos disponíveis no hotel, podendo incluir, remover, alterar ou consultar os dados dos quartos. 
+---
 
-Ator Primário: Administrador. 
+## Caso de Uso: Gerenciar Entrada e Saída
+**Código:** RF09  
+**Atores:** Hóspede, Sistema  
+**Descrição:** Permite realizar check-in e check-out online.
 
-Ator Secundário: Recepcionista (com acesso somente de consulta). 
+### Fluxo Principal:
+1. Hóspede acessa portal.  
+2. Sistema valida dados e atualiza status.
 
-Pré-condições: O Administrador deve estar autenticado no sistema com permissões adequadas. 
+---
 
-Fluxo Principal: 
+## Caso de Uso: Implementar Perfis de Usuário
+**Código:** RF10  
+**Atores:** Administrador  
+**Descrição:** Define níveis de acesso e permissões conforme o perfil.
 
-1) O Administrador requisita a manutenção dos quartos. 
-2) O Sistema apresenta as operações disponíveis: inclusão de novo quarto, alteração, exclusão e consulta de informações. 
-3) O Administrador seleciona a operação desejada: Inclusão, Exclusão, Alteração ou Consulta, ou opta por finalizar o caso de uso. 
-4) Se o Administrador desejar continuar com a gestão de quartos, o caso de uso retorna ao passo 2; caso contrário, o caso de uso é encerrado. 
+### Fluxo Principal:
+1. Administrador cadastra usuário.  
+2. Seleciona perfil e define permissões.
 
-Fluxo Alternativo (3): Inclusão 
+---
 
- 3.1 - O Administrador requisita a inclusão de um novo quarto. <br>
- 3.2 - O Sistema solicita o número do quarto a ser cadastrado. <br>
- 3.3 - O Administrador fornece o número. <br>
- 3.4 - O Sistema verifica se o quarto já está cadastrado. <br>
-     ↳ Se sim, informa que o número já está em uso e retorna ao passo 2. <br>
-     ↳ Se não, apresenta um formulário em branco com os campos: Número, Tipo (ex: solteiro, casal, luxo), Capacidade, Preço da Diária, Descrição, Status (Disponível, Ocupado, Em manutenção), Observações. <br>
- 3.5 - O Administrador preenche os dados. <br>
- 3.6 - O Sistema valida os dados. <br>
-     ↳ Se forem válidos, o novo quarto é cadastrado e a lista atualizada. <br>
-     ↳ Caso contrário, o sistema informa o erro e solicita correção. <br>
+## Caso de Uso: Gerenciar Pacotes e Promoções
+**Código:** RF11  
+**Atores:** Gerente  
+**Descrição:** Permite criar e controlar promoções e pacotes especiais.
 
-Fluxo Alternativo (3): Remoção 
+### Fluxo Principal:
+1. Gerente define detalhes do pacote.  
+2. Sistema armazena e disponibiliza para reserva.
 
- 3.1 - O Administrador seleciona um quarto da lista. <br>
- 3.2 - O Sistema verifica se o quarto está disponível e sem reservas futuras. <br>
-     ↳ Se sim, realiza a exclusão. <br>
-     ↳ Se não, informa que o quarto não pode ser removido. <br>
+---
 
-Fluxo Alternativo (3): Alteração 
+## Caso de Uso: Gerenciar Serviços do Hotel
+**Código:** RF12  
+**Atores:** Gerente  
+**Descrição:** Controla serviços gerais como lavanderia e academia.
 
- 3.1 - O Administrador seleciona um quarto. <br>
- 3.2 - O Sistema exibe os dados cadastrados. <br>
- 3.3 - O Administrador altera os dados desejados. <br>
- 3.4 - O Sistema valida os dados. <br>
-     ↳ Se forem válidos, realiza a atualização. <br>
-     ↳ Caso contrário, informa o erro. <br>
+### Fluxo Principal:
+1. Gerente acessa lista de serviços.  
+2. Altera disponibilidade e valores.
 
-Fluxo Alternativo (3): Consulta 
+---
 
- 3.1 - O Administrador opta por pesquisar um quarto pelo número, tipo ou status. <br>
- 3.2 - O Sistema apresenta os resultados em uma lista. <br>
- 3.3 - O Administrador seleciona um quarto. <br>
- 3.4 - O Sistema exibe os dados detalhados do quarto. <br>
+## Caso de Uso: Apresentar Informações sobre o Hotel
+**Código:** RF13  
+**Atores:** Visitantes, Hóspedes  
+**Descrição:** Exibe informações institucionais do hotel.
 
-Pós-condições: Um quarto foi inserido, removido, alterado ou visualizado no sistema com sucesso. 
+### Fluxo Principal:
+1. Usuário acessa seção "Sobre o Hotel".  
+2. Sistema exibe conteúdo institucional.
 
-### Efetuar Reserva Online (CSU04) 
+---
 
-Sumário: O hóspede logado realiza uma reserva de hospedagem pelo site. 
+## Caso de Uso: Exibir Galeria de Fotos
+**Código:** RF14  
+**Atores:** Visitantes, Hóspedes  
+**Descrição:** Exibe imagens organizadas por categorias.
 
-Ator Primário: Hóspede. 
+### Fluxo Principal:
+1. Usuário acessa galeria.  
+2. Sistema exibe imagens por categoria.
 
-Pré-condições: O hóspede precisa estar cadastrado e autenticado.  
+---
 
-Fluxo Principal: 
-1) O hóspede acessa a página de reservas. 
-2) Seleciona as datas de entrada e saída. 
-3) O sistema exibe os quartos disponíveis. 
-4) O hóspede escolhe o quarto e confirma a reserva. 
-5) O sistema registra a reserva e exibe os dados. 
+## Caso de Uso: Apresentar Gastronomia
+**Código:** RF15  
+**Atores:** Hóspedes, Visitantes  
+**Descrição:** Exibe restaurantes e cardápios do hotel.
 
-Pós-condições: A reserva é registrada no sistema. 
+### Fluxo Principal:
+1. Usuário acessa a seção de gastronomia.  
+2. Sistema mostra restaurantes, horários e cardápio com preços.
+
 
 ### 3.4.3 Diagrama de Classes 
 
