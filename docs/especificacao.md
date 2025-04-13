@@ -259,7 +259,7 @@ A Figura 2 mostra o diagrama de classes do sistema. O diagrama de classes do sis
 
 #### Figura 2: Diagrama de Classes do Sistema.
  
-![image](https://uploaddeimagens.com.br/images/004/890/476/original/WhatsApp_Image_2025-04-07_at_18.33.31.jpeg?1744070282)
+![image](https://uploaddeimagens.com.br/images/004/891/661/original/UML_-_Hotel_Golden_Horizon_.jpg?1744587473)
 
 
 ### 3.4.4 Descrições das Classes 
