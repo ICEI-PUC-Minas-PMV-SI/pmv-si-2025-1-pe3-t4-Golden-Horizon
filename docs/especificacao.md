@@ -1,7 +1,5 @@
 # 3. DOCUMENTO DE ESPECIFICAÇÃO DE REQUISITOS DE SOFTWARE
 
-Nesta parte do trabalho você deve detalhar a documentação dos requisitos do sistema proposto de acordo com as seções a seguir. Ressalta-se que aqui é utilizado como exemplo um sistema de gestão de cursos de aperfeiçoamento.
-
 ## 3.1 Objetivos deste documento
 Descrever e especificar as necessidades dos usuários e dos processos administrativos e operacionais de um hotel que devem ser atendidas pelo projeto Sistema de Gestão Hoteleira.
 
