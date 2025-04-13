@@ -70,7 +70,13 @@ O Sistema de Gestão Hoteleira não contempla funcionalidades relacionadas à at
 ## 3.4 Modelagem do Sistema
 
 ### 3.4.1 Diagrama de Casos de Uso
-Como observado no diagrama de casos de uso da Figura 1, a recepcionista poderá gerenciar os dados de hóspedes no sistema, enquanto o administrador, além dessas funções, poderá gerenciar os quartos e eventos. E os clientes terão acesso ao cadastro e solicitação de hospedagem.
+Como representado no diagrama de casos de uso da Figura 1, os hóspedes podem realizar ações como consultar informações sobre o hotel, realizar reservas, realizar pagamentos, avaliar a estadia e visualizar conteúdos como fotos e gastronomia.
+
+A recepcionista é responsável por gerenciar reservas, hóspedes, acomodações e atuando diretamente no suporte às operações do hotel.
+
+O administrador possui permissões avançadas, podendo gerenciar perfis de usuário, tem acesso a funcionalidades estratégicas, como geração de relatórios gerenciais, gerenciamento de pacotes e promoções, e controle dos serviços oferecidos pelo hotel.
+
+Por fim, o sistema realiza ações automáticas como atualização de status das acomodações e envio de comunicações eletrônicas em eventos relevantes da hospedagem.
 
 #### Figura 1: Diagrama de Casos de Uso do Sistema.
 
@@ -78,12 +84,12 @@ Como observado no diagrama de casos de uso da Figura 1, a recepcionista poderá 
  
 ### 3.4.2 Descrições de Casos de Uso
 
-## Caso de Uso: Gerenciar Reservas
+#### Caso de Uso: Gerenciar Reservas
 **Código:** RF01  
 **Atores:** Recepcionista, Hóspede  
 **Descrição:** Permite criar, alterar, excluir e consultar reservas, verificando disponibilidade de quartos em tempo real e aplicando regras do hotel como prazo mínimo e multas.
 
-### Fluxo Principal:
+#### Fluxo Principal:
 1. Ator acessa o módulo de reservas.  
 2. Seleciona datas e tipo de quarto.  
 3. Sistema exibe disponibilidade.  
@@ -92,157 +98,157 @@ Como observado no diagrama de casos de uso da Figura 1, a recepcionista poderá 
 
 ---
 
-## Caso de Uso: Gerenciar Hóspedes
+#### Caso de Uso: Gerenciar Hóspedes
 **Código:** RF02  
 **Atores:** Recepcionista, Hóspede  
 **Descrição:** Permite cadastrar, editar, excluir e consultar dados dos hóspedes, incluindo histórico e preferências.
 
-### Fluxo Principal:
+#### Fluxo Principal:
 1. Ator acessa cadastro de hóspedes.  
 2. Insere ou edita dados pessoais.  
 3. Sistema salva ou atualiza o registro.
 
 ---
 
-## Caso de Uso: Gerenciar Pagamentos
+#### Caso de Uso: Gerenciar Pagamentos
 **Código:** RF03  
 **Atores:** Recepcionista, Hóspede  
 **Descrição:** Controla pagamentos e recibos, permitindo várias formas de pagamento e geração de comprovantes.
 
-### Fluxo Principal:
+#### Fluxo Principal:
 1. Ator acessa detalhes da reserva.  
 2. Seleciona forma de pagamento.  
 3. Sistema registra e gera comprovante.
 
 ---
 
-## Caso de Uso: Gerenciar Acomodações
+#### Caso de Uso: Gerenciar Acomodações
 **Código:** RF04  
 **Atores:** Recepcionista, Sistema  
 **Descrição:** Atualiza status das acomodações com base em eventos e permite consulta.
 
-### Fluxo Principal:
+#### Fluxo Principal:
 1. Sistema atualiza status automaticamente.  
 2. Ator pode consultar ou alterar manualmente.
 
 ---
 
-## Caso de Uso: Gerar Relatórios
+#### Caso de Uso: Gerar Relatórios
 **Código:** RF05  
-**Atores:** Gerente  
+**Atores:** Administrador  
 **Descrição:** Permite gerar relatórios gerenciais com dados em tempo real.
 
-### Fluxo Principal:
-1. Gerente seleciona tipo e período.  
+#### Fluxo Principal:
+1. Administrador seleciona tipo e período.  
 2. Sistema gera relatório com gráficos e indicadores.
 
 ---
 
-## Caso de Uso: Gerenciar Serviços Adicionais
+#### Caso de Uso: Gerenciar Serviços Adicionais
 **Código:** RF06  
 **Atores:** Recepcionista, Hóspede  
 **Descrição:** Permite adicionar serviços extras à fatura da reserva.
 
-### Fluxo Principal:
+#### Fluxo Principal:
 1. Ator seleciona serviços adicionais.  
 2. Sistema inclui serviços e atualiza cobrança.
 
 ---
 
-## Caso de Uso: Avaliar Estadia
+#### Caso de Uso: Avaliar Estadia
 **Código:** RF07  
 **Atores:** Hóspede  
 **Descrição:** Permite ao hóspede avaliar a experiência após o check-out.
 
-### Fluxo Principal:
+#### Fluxo Principal:
 1. Sistema envia link de avaliação.  
 2. Hóspede preenche notas e comenta.
 
 ---
 
-## Caso de Uso: Enviar Comunicações
+#### Caso de Uso: Enviar Comunicações
 **Código:** RF08  
 **Atores:** Sistema  
 **Descrição:** Envia e-mails automáticos relacionados à estadia.
 
-### Fluxo Principal:
+#### Fluxo Principal:
 1. Sistema identifica evento (reserva, check-in, etc).  
 2. Dispara comunicação correspondente.
 
 ---
 
-## Caso de Uso: Gerenciar Entrada e Saída
+#### Caso de Uso: Gerenciar Entrada e Saída
 **Código:** RF09  
 **Atores:** Hóspede, Sistema  
 **Descrição:** Permite realizar check-in e check-out online.
 
-### Fluxo Principal:
+#### Fluxo Principal:
 1. Hóspede acessa portal.  
 2. Sistema valida dados e atualiza status.
 
 ---
 
-## Caso de Uso: Implementar Perfis de Usuário
+#### Caso de Uso: Implementar Perfis de Usuário
 **Código:** RF10  
 **Atores:** Administrador  
 **Descrição:** Define níveis de acesso e permissões conforme o perfil.
 
-### Fluxo Principal:
+#### Fluxo Principal:
 1. Administrador cadastra usuário.  
 2. Seleciona perfil e define permissões.
 
 ---
 
-## Caso de Uso: Gerenciar Pacotes e Promoções
+#### Caso de Uso: Gerenciar Pacotes e Promoções
 **Código:** RF11  
-**Atores:** Gerente  
+**Atores:** Administrador  
 **Descrição:** Permite criar e controlar promoções e pacotes especiais.
 
-### Fluxo Principal:
-1. Gerente define detalhes do pacote.  
+#### Fluxo Principal:
+1. Administrador define detalhes do pacote.  
 2. Sistema armazena e disponibiliza para reserva.
 
 ---
 
-## Caso de Uso: Gerenciar Serviços do Hotel
+#### Caso de Uso: Gerenciar Serviços do Hotel
 **Código:** RF12  
-**Atores:** Gerente  
+**Atores:** Administrador  
 **Descrição:** Controla serviços gerais como lavanderia e academia.
 
-### Fluxo Principal:
-1. Gerente acessa lista de serviços.  
+#### Fluxo Principal:
+1. Administrador acessa lista de serviços.  
 2. Altera disponibilidade e valores.
 
 ---
 
-## Caso de Uso: Apresentar Informações sobre o Hotel
+#### Caso de Uso: Apresentar Informações sobre o Hotel
 **Código:** RF13  
 **Atores:** Visitantes, Hóspedes  
 **Descrição:** Exibe informações institucionais do hotel.
 
-### Fluxo Principal:
+#### Fluxo Principal:
 1. Usuário acessa seção "Sobre o Hotel".  
 2. Sistema exibe conteúdo institucional.
 
 ---
 
-## Caso de Uso: Exibir Galeria de Fotos
+#### Caso de Uso: Exibir Galeria de Fotos
 **Código:** RF14  
 **Atores:** Visitantes, Hóspedes  
 **Descrição:** Exibe imagens organizadas por categorias.
 
-### Fluxo Principal:
+#### Fluxo Principal:
 1. Usuário acessa galeria.  
 2. Sistema exibe imagens por categoria.
 
 ---
 
-## Caso de Uso: Apresentar Gastronomia
+#### Caso de Uso: Apresentar Gastronomia
 **Código:** RF15  
 **Atores:** Hóspedes, Visitantes  
 **Descrição:** Exibe restaurantes e cardápios do hotel.
 
-### Fluxo Principal:
+#### Fluxo Principal:
 1. Usuário acessa a seção de gastronomia.  
 2. Sistema mostra restaurantes, horários e cardápio com preços.
 
