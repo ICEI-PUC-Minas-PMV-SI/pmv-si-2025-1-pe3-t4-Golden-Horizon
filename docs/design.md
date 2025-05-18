@@ -110,11 +110,22 @@ Mapa da Empatia é um material utilizado para conhecer melhor o seu cliente. A p
 | **Dores** | Plataformas não confiávies. Falta de informaçõees sobre promoções.  |
 | **Ganhos** | Notificações sobre promoções e descontos. Plataformas e sistemas de reserva seguros. |
 
+## Mapa de Empatia — Paulo Mendes
+
+| Categoria        | Descrição |
+|------------------|-----------|
+| **O que ele vê?** | Muitos sites e plataformas de reserva com layouts confusos e impráticos. |
+| **O que ele ouve?** | Propagandas na internet. Recomendações de amigos e colegas de trabalho. |
+| **O que ele pensa e sente?** | Valoriza primeiras impressões. Frustração com sites confusos e com informações supérfluas. Desejo de facilidade. |
+| **O que ele fala e faz?** | Não permanece por muito tempo em sites que não o agradam. Não dá segundas chances a sistemas de reserva precários.  |
+| **Dores** | Sites difíceis de navegar. Erros frequentes em sistemas de reservas. |
+| **Ganhos** | Sites visualmente agradáveis. Sites com informações claras e organizadas. Sistema da reservas robusto. |
+
 ## Mapa de Empatia — Flávia Borges
 
 | Categoria        | Descrição |
 |------------------|-----------|
-| **O que ela vê?** | Sites de hotéis com poucas informações detalhadas sobre osquartos e serviços. |
+| **O que ela vê?** | Sites de hotéis com poucas informações detalhadas sobre quartos e serviços. |
 | **O que ela ouve?** | Tendências no mundo do turismo. Interesse dos seus seguidores nas mídias sociais. |
 | **O que ela pensa e sente?** | Espera conseguir produzir conteúdo de qualidade. Odeia não conseguir estabelecer um cronograma de suas atividades. |
 | **O que ela fala e faz?** | Busca hotéis com amplas informações. Procura opiniões nas redes sociais. É bastante vocal em seus perfis sobre suas frustrações com hotéis e serviços. |
