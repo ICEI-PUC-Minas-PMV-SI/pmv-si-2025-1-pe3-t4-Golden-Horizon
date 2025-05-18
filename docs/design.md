@@ -77,7 +77,7 @@ Mapa da Empatia é um material utilizado para conhecer melhor o seu cliente. A p
 | **Dores** | Falta de integração nas reservas. Processos manuais causam atrasos. Dificuldade para gerar relatórios. |
 | **Ganhos** | Agilidade no check-in/check-out. Controle de reservas em tempo real. Dados para decisões rápidas. |
 
-## Mapa de Empatia — Bruno
+## Mapa de Empatia — Bruno Lopes
 
 | Categoria        | Descrição |
 |------------------|-----------|
@@ -87,6 +87,17 @@ Mapa da Empatia é um material utilizado para conhecer melhor o seu cliente. A p
 | **O que ele fala e faz?** | Compara hotéis rapidamente. Procura avaliações. Prefere check-in online e transparência. |
 | **Dores** | Sites confusos no celular. Falta de transparência de preços. Reservas complicadas. |
 | **Ganhos** | Reserva rápida e segura. Confirmações automáticas no celular. Facilidade de avaliação pós-estadia. |
+
+## Mapa de Empatia — Rafael Silva
+
+| Categoria        | Descrição |
+|------------------|-----------|
+| **O que ele vê?** | Sites de hotel de difícil navegação e sistemas de reserva precários. |
+| **O que ele ouve?** | Indicações de colegas e outros empresários do ramo. Hotéis que oferecem preços competitivos. |
+| **O que ele pensa e sente?** | Medo de acomodações de má qualidade. Frustração com atrasos e falhas de comunicação. Desejo de conforto e agilidade. |
+| **O que ele fala e faz?** | Faz comparações ponderadas sobre custo-benefício entre hotéis. Procura informações sobre preços e promoções. |
+| **Dores** | Sites sem informações claras sobre preço. Falhas nos sistemas de reserva de quartos. |
+| **Ganhos** | Preços competitivos. Amplas informações sobre as acomodações. Reservas, check-ins e check-outs rápidos. |
 
 ## Mapa de Empatia — Flávia Borges
 
