@@ -99,6 +99,17 @@ Mapa da Empatia é um material utilizado para conhecer melhor o seu cliente. A p
 | **Dores** | Sites sem informações claras sobre preço. Falhas nos sistemas de reserva de quartos. |
 | **Ganhos** | Preços competitivos. Amplas informações sobre as acomodações. Reservas, check-ins e check-outs rápidos. |
 
+## Mapa de Empatia — Juliana Freitas
+
+| Categoria        | Descrição |
+|------------------|-----------|
+| **O que ela vê?** | Muitas propagandas de promoções e descontos em reservas de hotéis, mas nem sempre de plataformas confiáveis. |
+| **O que ela ouve?** | Porpagandas em sites. Experiências de conhecidos. Avaliações on-line. |
+| **O que ela pensa e sente?** | Medo de golpes. Anseio por encontrar bons descontos. Desejo de obter boas experiências custo-benefício. |
+| **O que ela fala e faz?** | Está sempre atenta por promoções. Sempre procura saber se a plataforma que está utilizando é segura. |
+| **Dores** | Plataformas não confiávies. Falta de informaçõees sobre promoções.  |
+| **Ganhos** | Notificações sobre promoções e descontos. Plataformas e sistemas de reserva seguros. |
+
 ## Mapa de Empatia — Flávia Borges
 
 | Categoria        | Descrição |
