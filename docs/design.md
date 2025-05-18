@@ -88,6 +88,17 @@ Mapa da Empatia é um material utilizado para conhecer melhor o seu cliente. A p
 | **Dores** | Sites confusos no celular. Falta de transparência de preços. Reservas complicadas. |
 | **Ganhos** | Reserva rápida e segura. Confirmações automáticas no celular. Facilidade de avaliação pós-estadia. |
 
+## Mapa de Empatia — Flávia Borges
+
+| Categoria        | Descrição |
+|------------------|-----------|
+| **O que ela vê?** | Sites de hotéis com poucas informações detalhadas sobre osquartos e serviços. |
+| **O que ela ouve?** | Tendências no mundo do turismo. Interesse dos seus seguidores nas mídias sociais. |
+| **O que ela pensa e sente?** | Espera conseguir produzir conteúdo de qualidade. Odeia não conseguir estabelecer um cronograma de suas atividades. |
+| **O que ela fala e faz?** | Busca hotéis com amplas informações. Procura opiniões nas redes sociais. É bastante vocal em seus perfis sobre suas frustrações com hotéis e serviços. |
+| **Dores** | Sites de hotéis com poucas informações. Não conseguir agendar serviços e amendidades previamente. Sites mal configurados para smartphones. |
+| **Ganhos** | Informações amplas e atualizadas sobre quartos, serviços e atividades dos hotéis. Acessibilidade em smartphones. |
+
 ## 4.3 Protótipos das Interfaces
 Apresente nesta seção os protótipos de alta fidelidade do sistema proposto. A fidelidade do protótipo refere-se ao nível de detalhes e funcionalidades incorporadas a ele. Assim, um protótipo de alta fidelidade é uma representação interativa do produto, baseada no computador ou em dispositivos móveis. Esse protótipo já apresenta maior semelhança com o design final em termos de detalhes e funcionalidades. No desenvolvimento dos protótipos, devem ser considerados os princípios gestálticos, as recomendações ergonômicas e as regras de design (como as 8 regras de ouro). É importante descrever no texto do relatório como os princípios gestálticos e as regras de ouro foram seguidas no projeto das interfaces. Nesta etapa deve-se dar uma ênfase na implementação do software de modo que possam ser realizados os testes com usuários na etapa seguinte.
 
