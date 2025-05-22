@@ -24,3 +24,31 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+footer {
+  --foreground: rgb(255, 255, 255);
+  font-family: var(--font-geist-sans);
+}
+
+footer a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+footer ul,
+footer ol,
+footer menu {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+footer li::before,
+footer li::after {
+  content: none !important;
+  display: none !important;
+}
+
+footer .geist-list li::before {
+  content: none !important;
+}
