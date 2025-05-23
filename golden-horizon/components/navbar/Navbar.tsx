@@ -6,17 +6,17 @@ import logo from "@/public/assets/images/logo.jpg";
 
 export default function Navbar() {
   return (
-    <nav className="bg-[#7C6A46] text-white sticky top-0 z-50 shadow-md">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+    <nav className="bg-white sticky top-0 z-50 shadow-md">
+      <div className="mx-auto px-8">
+        <div className="flex items-center justify-between h-24">
           <div className="flex-shrink-0">
             <Link href="/">
               <Image
                 src={logo}
                 alt="Golden Horizon Hotel"
-                width={40}
-                height={40}
-                className="rounded-full object-cover aspect-square"
+                width={60}
+                height={60}
+                className="rounded-full object-cover aspect-square shadow-lg"
                 priority
               />
             </Link>
@@ -34,8 +34,8 @@ export default function Navbar() {
             <Button
               type="secondary"
               auto
-              scale={0.9}
-              className="!bg-amber-600 !text-white hover:!bg-amber-700"
+              scale={1.2}
+              className="!bg-[#7C6A46] !text-white !font-bold hover:!bg-amber-700 !border-none"
               placeholder={undefined}
               onPointerEnterCapture={undefined}
               onPointerLeaveCapture={undefined}
@@ -53,7 +53,7 @@ function NavLink({ href, children }: { href: string; children: string }) {
   return (
     <Link
       href={href}
-      className="text-white hover:text-amber-200 transition-colors font-medium text-sm"
+      className="!text-black hover:!text-[#7C6A46] transition-colors font-bold text-sm"
     >
       {children}
     </Link>
