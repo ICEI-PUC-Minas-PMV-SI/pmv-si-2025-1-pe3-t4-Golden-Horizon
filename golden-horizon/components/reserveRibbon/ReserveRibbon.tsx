@@ -78,7 +78,7 @@ export default function ReserveRibbon({
           </div>
         </div>
         <Button
-          className="!bg-[#7C6A46] !text-white !font-bold hover:!bg-amber-700 !border-none !rounded-full px-6"
+          className="!bg-[#7C6A46] !text-white !font-bold hover:!bg-amber-700 !border-none px-6"
           placeholder={undefined}
           onPointerEnterCapture={undefined}
           onPointerLeaveCapture={undefined}

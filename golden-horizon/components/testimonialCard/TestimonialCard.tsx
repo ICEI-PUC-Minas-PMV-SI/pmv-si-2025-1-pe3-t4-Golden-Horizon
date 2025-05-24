@@ -2,7 +2,7 @@ import { Star } from "@geist-ui/icons";
 
 export default function TestimonialCard() {
   return (
-    <div className="p-4 rounded-md shadow-md bg-white max-w-md">
+    <div className="p-4 rounded-md shadow-md bg-white max-w-md mb-10">
       <div className="flex justify-between items-center">
         <p className="text-sm text-gray-500">2. Mar. 2023</p>
         <div className="flex space-x-1">
