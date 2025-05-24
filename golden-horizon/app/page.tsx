@@ -1,13 +1,8 @@
 import Image from "next/image";
 import casaImg from "@/public/assets/images/casaHome.jpg";
-import { Dancing_Script } from "next/font/google";
 import { roomMock, utilities } from "@/utils/home.utils";
 import RoomCard from "@/components/roomBox/RoomCard";
-
-const dancingScript = Dancing_Script({
-  subsets: ["latin"],
-  weight: ["700"],
-});
+import DancingScript from "@/components/dancingScript/DancingScript";
 
 export default function Home() {
   return (
@@ -15,9 +10,7 @@ export default function Home() {
       <main>
         <div className="flex h-screen mx-20">
           <div className="flex-1 pt-10">
-            <h1 className={`${dancingScript.className} italic !text-[#7C6A46]`}>
-              Golden Horizon
-            </h1>
+            <DancingScript text="Golden Horizon" />
             <h2>Um Hotel para cada momento rico em emoção</h2>
             <p>Cada momento parece a primeira vez na vista do paraíso</p>
           </div>
