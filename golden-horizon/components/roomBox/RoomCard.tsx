@@ -13,7 +13,7 @@ export default function RoomCard({
   image,
 }: RoomCardProps) {
   return (
-    <div className="relative w-[300px] rounded-md bg-white">
+    <div className="relative w-[300px] rounded-md bg-white hover:scale-105 hover:cursor-pointer transition-transform duration-300">
       <div className="m-4">
         <Image src={image} alt="a nice room" />
         <p>{cardText}</p>
