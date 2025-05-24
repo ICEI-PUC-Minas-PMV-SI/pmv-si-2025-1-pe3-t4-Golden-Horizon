@@ -2,7 +2,10 @@ import Image from "next/image";
 import casaImg from "@/public/assets/images/casaHome.jpg";
 import { Dancing_Script } from "next/font/google";
 import { roomMock, utilities } from "@/utils/home.utils";
-import RoomCard from "@/components/roomBox/RoomCard";
+import RoomCard from "@/components/roomCard/RoomCard";
+import TestimonialCard from "@/components/testimonialCard/TestimonialCard";
+import HomeRibbon from "@/components/homeRibbon/HomeRibbon";
+import ReserveRibbon from "@/components/reserveRibbon/ReserveRibbon";
 
 const dancingScript = Dancing_Script({
   subsets: ["latin"],
@@ -13,22 +16,27 @@ export default function Home() {
   return (
     <div className="font-[family-name:var(--font-geist-sans)]">
       <main>
-        <div className="flex h-screen mx-20">
+        <div className="flex mx-20">
           <div className="flex-1 pt-10">
             <h1 className={`${dancingScript.className} italic !text-[#7C6A46]`}>
               Golden Horizon
             </h1>
             <h2>Um Hotel para cada momento rico em emoção</h2>
             <p>Cada momento parece a primeira vez na vista do paraíso</p>
+            <HomeRibbon />
           </div>
           <div className="flex-1 relative">
             <Image
               src={casaImg}
-              fill
+              height={800}
               alt="Um resort"
               className="object-cover"
             />
           </div>
+        </div>
+
+        <div className="mx-20">
+          <ReserveRibbon />
         </div>
 
         <div className="my-10 mx-20">
@@ -80,6 +88,17 @@ export default function Home() {
                 cardText={card.description}
                 image={card.image}
               />
+            ))}
+          </div>
+        </div>
+        <div className="mt-20">
+          <div className="flex flex-col items-center justify-center">
+            <h2 className="text-3xl font-semibold">Testemunhos</h2>
+          </div>
+
+          <div className="flex mx-20 space-x-8">
+            {Array.from({ length: 3 }).map((_, i) => (
+              <TestimonialCard key={i} />
             ))}
           </div>
         </div>
