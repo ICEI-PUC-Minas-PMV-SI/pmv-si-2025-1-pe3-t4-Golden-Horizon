@@ -1,6 +1,6 @@
 "use server";
 
-import db from "@/lib/db";
+import db from "@/lib/prisma";
 
 export default async function RegisterAction(formData: FormData) {
   const entries = Array.from(formData.entries());
