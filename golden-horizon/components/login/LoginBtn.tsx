@@ -10,6 +10,9 @@ export default function LoginBtn() {
       onClick={() => {
         window.location.href = "/login";
       }}
+      placeholder={undefined}
+      onPointerEnterCapture={undefined}
+      onPointerLeaveCapture={undefined}
     >
       Entrar / Registrar
     </Button>

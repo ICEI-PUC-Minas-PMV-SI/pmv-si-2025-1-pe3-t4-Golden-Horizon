@@ -12,6 +12,9 @@ export default function HomeRibbon() {
         !text-white
         !rounded-full
         !mr-5"
+        placeholder={undefined}
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
       >
         Reserve agora
       </Button>
@@ -20,6 +23,9 @@ export default function HomeRibbon() {
           iconRight={<Play fill="white" color="white" />}
           auto
           className="!rounded-full !bg-[#00A699]"
+          placeholder={undefined}
+          onPointerEnterCapture={undefined}
+          onPointerLeaveCapture={undefined}
         ></Button>
         <span className="ml-2">Faça uma tour</span>
       </div>
