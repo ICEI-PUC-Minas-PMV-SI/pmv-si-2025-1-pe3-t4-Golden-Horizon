@@ -7,8 +7,8 @@ const dancingScript = Dancing_Script({
 
 export default function DancingScript({ text }: { text: string }) {
   return (
-    <h1 className={`${dancingScript.className} italic !text-[#7C6A46]`}>
+    <span className={`${dancingScript.className} italic !text-[#7C6A46]`}>
       {text}
-    </h1>
+    </span>
   );
 }

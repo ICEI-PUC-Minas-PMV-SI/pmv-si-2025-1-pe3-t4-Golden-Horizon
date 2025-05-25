@@ -10,7 +10,9 @@ export default function Home() {
       <main>
         <div className="flex h-screen mx-20">
           <div className="flex-1 pt-10">
-            <DancingScript text="Golden Horizon" />
+            <h1>
+              <DancingScript text="Golden Horizon" />
+            </h1>
             <h2>Um Hotel para cada momento rico em emoção</h2>
             <p>Cada momento parece a primeira vez na vista do paraíso</p>
           </div>
