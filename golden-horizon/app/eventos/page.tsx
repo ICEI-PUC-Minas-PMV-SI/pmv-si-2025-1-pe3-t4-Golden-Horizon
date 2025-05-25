@@ -3,36 +3,28 @@ export default function EventosPage() {
     {
       title: "Áreas externas",
       img: "/assets/images/externa.jpg",
-      desc:
-        "Imagine um evento ao ar livre, com uma bela piscina iluminada, lounges confortáveis e um espaço gourmet completo com churrasqueira. Ideal para festas descontraídas ou celebrações ao pôr do sol. É o ambiente perfeito para criar memórias especiais em meio à natureza e com um toque de charme.",
+      desc: "Imagine um evento ao ar livre, com uma bela piscina iluminada, lounges confortáveis e um espaço gourmet completo com churrasqueira. Ideal para festas descontraídas ou celebrações ao pôr do sol. É o ambiente perfeito para criar memórias especiais em meio à natureza e com um toque de charme.",
     },
     {
       title: "Academia",
       img: "/assets/images/academia.jpg",
-      desc:
-        "Para quem não abre mão do bem-estar mesmo durante eventos, nossa academia está equipada com aparelhos de última geração. É uma excelente opção para eventos de bem-estar, retiros corporativos ou grupos fitness.",
+      desc: "Para quem não abre mão do bem-estar mesmo durante eventos, nossa academia está equipada com aparelhos de última geração. É uma excelente opção para eventos de bem-estar, retiros corporativos ou grupos fitness.",
     },
     {
       title: "Restaurante",
       img: "/assets/images/restaurante.jpg",
-      desc:
-        "Nosso restaurante oferece um cardápio cuidadosamente elaborado por chefs experientes, com opções que vão desde pratos regionais até cozinha internacional. Para eventos, oferecemos cardápios personalizados, coquetéis especiais e um ambiente sofisticado, perfeito para jantares de gala, coffee breaks e recepções intimistas.",
+      desc: "Nosso restaurante oferece um cardápio cuidadosamente elaborado por chefs experientes, com opções que vão desde pratos regionais até cozinha internacional. Para eventos, oferecemos cardápios personalizados, coquetéis especiais e um ambiente sofisticado, perfeito para jantares de gala, coffee breaks e recepções intimistas.",
     },
   ];
 
   return (
- <main className="flex flex-col items-center justify-center px-4 pb-20 font-[var(--font-raleway)] text-[#1C1C1C]">
-<section className="relative w-full h-[60vh] mb-16 flex items-center justify-center bg-[url('/assets/images/banner.jpg')] bg-cover bg-center">
-  <div className="absolute inset-0 bg-black/40 z-0"></div>
-  <h2 className="text-white text-4xl sm:text-5xl font-bold text-center z-10">
-    Faça seu evento conosco
-  </h2>
-</section>
-
-
-
-
-
+    <main className="flex flex-col items-center justify-center px-4 pb-20 font-[var(--font-raleway)] text-[#1C1C1C]">
+      <section className="relative w-full h-[60vh] mb-16 flex items-center justify-center bg-[url('/assets/images/banner.jpg')] bg-cover bg-center">
+        <div className="absolute inset-0 bg-black/40 z-0"></div>
+        <h2 className="text-white text-4xl sm:text-5xl font-bold text-center z-10">
+          Faça seu evento conosco
+        </h2>
+      </section>
 
       <h2 className="text-[40px] font-semibold text-center mb-10">
         Faça um tour
