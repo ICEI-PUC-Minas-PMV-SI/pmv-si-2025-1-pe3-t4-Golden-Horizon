@@ -57,23 +57,8 @@ export default function Footer() {
             Newsletter
           </h3>
           <div className="flex flex-col space-y-2">
-            <Input
-              placeholder="Your email"
-              scale={0.8}
-              width="100%"
-              crossOrigin={undefined}
-              onPointerEnterCapture={undefined}
-              onPointerLeaveCapture={undefined}
-            />
-            <Button
-              type="secondary"
-              auto
-              scale={0.8}
-              className="w-full"
-              placeholder={undefined}
-              onPointerEnterCapture={undefined}
-              onPointerLeaveCapture={undefined}
-            >
+            <Input placeholder="Your email" scale={0.8} width="100%" />
+            <Button type="secondary" auto scale={0.8} className="w-full">
               Subscribe
             </Button>
           </div>
