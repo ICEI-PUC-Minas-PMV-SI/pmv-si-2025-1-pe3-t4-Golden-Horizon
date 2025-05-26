@@ -147,7 +147,7 @@ O protótipo funcional do site pode ser acessado por meio do link abaixo:
 A seguir, estão as imagens correspondentes às páginas do site:
 
 * Página Inicial (Home)
-  ![Home](caminho/para/imagem-home.png)
+  ![Home](docs/Homepage.png)
 
 * Quartos
   ![Quartos](caminho/para/imagem-quartos.png)
