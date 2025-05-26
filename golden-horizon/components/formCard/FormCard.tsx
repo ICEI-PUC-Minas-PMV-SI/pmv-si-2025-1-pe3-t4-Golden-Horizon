@@ -1,3 +1,5 @@
+"use client";
+
 import { Card } from "@geist-ui/react";
 
 export default function FormCard({ children }: { children: React.ReactNode }) {

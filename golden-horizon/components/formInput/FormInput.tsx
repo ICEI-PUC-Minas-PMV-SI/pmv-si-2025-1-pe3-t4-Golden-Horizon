@@ -5,11 +5,13 @@ export default function FormInput({
   name,
   placeholder,
   type,
+  className,
 }: {
   label: string;
   name: string;
   placeholder?: string;
-  type?: "text" | "email" | "password" | "tel";
+  type?: "text" | "email" | "password" | "tel" | "number";
+  className?: string;
 }) {
   return (
     <label htmlFor={name}>
@@ -18,12 +20,16 @@ export default function FormInput({
       </Text>
 
       <Input
+        className={className}
         htmlType={type}
         placeholder={placeholder}
         width="100%"
         name={name}
         id={name}
         scale={4 / 3}
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
+        crossOrigin={undefined}
       />
     </label>
   );
