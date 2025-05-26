@@ -150,28 +150,28 @@ As imagens correspondentes às páginas do site estão no seguinte caminho:
   docs/Homepage.png
 
 * Quartos
-  docs/rooms.png
+  docs/Rooms.png
 
 * Ofertas
-  ![Ofertas](caminho/para/imagem-ofertas.png)
+  docs/Ofertas.png
 
 * Login
-  ![Login](caminho/para/imagem-login.png)
+  docs/Login.png
 
 * Cadastro
-  ![Cadastro](caminho/para/imagem-cadastro.png)
+ docs/Registion.png
 
 * Contatos
-  ![Contatos](caminho/para/imagem-contatos.png)
+ docs/contact us.png
 
 * Reserva
-  ![Reserva](caminho/para/imagem-reserva.png)
+ docs/Reservas.png
 
 * Eventos
-  ![Eventos](caminho/para/imagem-eventos.png)
+  docs/Eventos.png
 
 * Pagamento
-  ![Pagamento](caminho/para/imagem-pagamento.png)
+ docs/Pagamento.png
 
 ---
 
