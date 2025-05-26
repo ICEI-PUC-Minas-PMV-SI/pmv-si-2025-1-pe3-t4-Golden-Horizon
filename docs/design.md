@@ -144,13 +144,13 @@ O protótipo funcional do site pode ser acessado por meio do link abaixo:
 
 ### Imagens das Páginas
 
-A seguir, estão as imagens correspondentes às páginas do site:
+As imagens correspondentes às páginas do site estão no seguinte caminho:
 
 * Página Inicial (Home)
-  ![Home](docs/Homepage.png)
+  docs/Homepage.png
 
 * Quartos
-  ![Quartos](caminho/para/imagem-quartos.png)
+  docs/rooms.png
 
 * Ofertas
   ![Ofertas](caminho/para/imagem-ofertas.png)
