@@ -144,34 +144,34 @@ O protótipo funcional do site pode ser acessado por meio do link abaixo:
 
 ### Imagens das Páginas
 
-As imagens correspondentes às páginas do site estão no seguinte caminho:
+As imagens correspondentes às páginas do site estão listadas abaixo:
 
-* Página Inicial (Home)
-  docs/Homepage.png
+#### Página Inicial (Home)
+![Home](./docs/Homepage.jpg)
 
-* Quartos
-  docs/Rooms.png
+#### Quartos
 
-* Ofertas
-  docs/Ofertas.png
 
-* Login
-  docs/Login.png
+#### Ofertas
+![Ofertas](./docs/Ofertas.png)
 
-* Cadastro
- docs/Registion.png
+#### Login
+![Login](./docs/Login.png)
 
-* Contatos
- docs/contact us.png
+#### Cadastro
+![Cadastro](./docs/Registion.png)
 
-* Reserva
- docs/Reservas.png
+#### Contatos
+![Contato PNG](./docs/contact%20us.png)  
 
-* Eventos
-  docs/Eventos.png
+#### Reserva
+![Reserva](./docs/Reservas.png)
 
-* Pagamento
- docs/Pagamento.png
+#### Eventos
+
+
+#### Pagamento
+![Pagamento](./docs/Pagamento.png)
 
 ---
 
