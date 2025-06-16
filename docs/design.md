@@ -147,7 +147,7 @@ O protótipo funcional do site pode ser acessado por meio do link abaixo:
 As imagens correspondentes às páginas do site estão listadas abaixo:
 
 #### Página Inicial (Home)
-![Home](./Homepage.jpg)
+![Home](./Homepage.png)
 
 #### Quartos
 ![Rooms](./Rooms.png)
@@ -168,7 +168,7 @@ As imagens correspondentes às páginas do site estão listadas abaixo:
 ![Reserva](./Reservas.png)
 
 #### Eventos
-*Imagem não disponível (Eventos.png não encontrado no repositório atual)*
+![Eventos](./Eventos.png)
 
 #### Pagamento
 ![Pagamento](./Pagamento.png)
