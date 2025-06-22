@@ -171,7 +171,7 @@ As imagens correspondentes às páginas do site estão listadas abaixo:
 ![Eventos](./Eventos.png)
 
 #### Pagamento
-![Pagamento](./checkout.png)
+![Pagamento](./checkout.jpeg)
 
 
 ## Código Fonte
