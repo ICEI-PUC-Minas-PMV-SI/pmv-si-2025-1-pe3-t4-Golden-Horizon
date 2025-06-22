@@ -3,13 +3,22 @@
 import { Button, Checkbox, Text } from "@geist-ui/react";
 import Link from "next/link";
 import Form from "next/form";
-import React from "react";
+import React, { useEffect } from "react";
 import FormInput from "@/components/formInput/FormInput";
 import loginAction from "./loginAction";
 import { useActionState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function LoginForm() {
-  const [state, formAction, isPending] = useActionState(loginAction, null);
+  const [state, formAction] = useActionState(loginAction, null);
+  const router = useRouter();
+
+  useEffect(() => {
+    if (state?.success) {
+      window.location.href = "/dashboard";
+    }
+  }, [state, router]);
+
   return (
     <>
       {state?.success === false && (
@@ -46,7 +55,7 @@ export default function LoginForm() {
         </Link>
 
         <Checkbox
-          value="remember"
+          value="on"
           name="remember"
           className="!my-[40px] !justify-start"
         >

@@ -7,9 +7,12 @@ export default async function loginAction(
   formData: FormData,
 ) {
   try {
+    const remember = formData.get("remember") === "on";
+
     await signIn("credentials", {
       email: formData.get("email") as string,
       password: formData.get("password") as string,
+      remember,
       redirect: false,
     });
     return { success: true };
