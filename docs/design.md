@@ -150,7 +150,7 @@ As imagens correspondentes às páginas do site estão listadas abaixo:
 ![Home](./Homepage.png)
 
 #### Quartos
-![Rooms](./Rooms.png)
+![Rooms](./quartos.jpeg)
 
 #### Ofertas
 ![Ofertas](./Ofertas.png)
@@ -171,7 +171,7 @@ As imagens correspondentes às páginas do site estão listadas abaixo:
 ![Eventos](./Eventos.png)
 
 #### Pagamento
-![Pagamento](./Pagamento.png)
+![Pagamento](./checkout.png)
 
 
 ## Código Fonte
