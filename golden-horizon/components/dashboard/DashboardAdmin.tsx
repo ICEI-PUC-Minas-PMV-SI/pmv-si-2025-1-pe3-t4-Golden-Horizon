@@ -1,6 +1,8 @@
 import { Text, Button } from "@geist-ui/react";
 import { useState } from "react";
 import NewRoomForm from "@/components/newRoomForm/NewRoomForm";
+import ActiveReservations from "../reservations/ActiveReservations";
+import AdminRoomReservation from "../rooms/AdminRoomReservation";
 
 export default function DashboardAdmin({ userName }: { userName: string }) {
   const [activeSection, setActiveSection] = useState<
@@ -15,7 +17,7 @@ export default function DashboardAdmin({ userName }: { userName: string }) {
 
   return (
     <div className="flex flex-col items-center justify-start min-h-[80vh] bg-[#f8f8f8] py-10">
-      <div className="w-full max-w-2xl bg-white rounded-xl shadow-lg p-8">
+      <div className="w-full max-w-5xl bg-white rounded-xl shadow-lg p-8">
         <Text h2 className="mb-2 text-center">
           Bem-vindo, {userName}!
         </Text>
@@ -23,7 +25,6 @@ export default function DashboardAdmin({ userName }: { userName: string }) {
           O que deseja gerenciar?
         </Text>
 
-        {/* Menu de ações */}
         <div className="flex flex-wrap gap-4 justify-center mb-10">
           <Button
             className={`${baseBtn} ${activeSection === "addRoom" ? activeBtn : ""}`}
@@ -71,16 +72,15 @@ export default function DashboardAdmin({ userName }: { userName: string }) {
           </Button>
         </div>
 
-        {/* Renderização condicional das seções */}
         {activeSection === "addRoom" && <NewRoomForm />}
         {activeSection === "reservations" && (
           <div className="text-center text-gray-500">
-            [Reservas ativas aqui]
+            <ActiveReservations />
           </div>
         )}
         {activeSection === "searchRoom" && (
           <div className="text-center text-gray-500">
-            [Consulta de quarto aqui]
+            <AdminRoomReservation />
           </div>
         )}
         {activeSection === "guests" && (

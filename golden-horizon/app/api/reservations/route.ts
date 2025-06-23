@@ -1,5 +1,6 @@
+import { auth } from "@/auth";
 import prisma from "@/lib/prisma";
-import { NextResponse } from "next/server";
+import { NextResponse, NextRequest } from "next/server";
 
 export async function POST(req: Request) {
   try {
@@ -26,4 +27,22 @@ export async function POST(req: Request) {
       { status: 500 },
     );
   }
+}
+
+export async function GET(req: NextRequest) {
+  const session = await auth();
+  if (!session || session.user.role !== "admin") {
+    return NextResponse.json([], { status: 403 });
+  }
+
+  // Exemplo: considera reservas ativas as que ainda não passaram do check-out
+  const now = new Date();
+  const reservations = await prisma.reservation.findMany({
+    where: {
+      checkOut: { gte: now },
+    },
+    include: { room: true },
+  });
+
+  return NextResponse.json(reservations);
 }
