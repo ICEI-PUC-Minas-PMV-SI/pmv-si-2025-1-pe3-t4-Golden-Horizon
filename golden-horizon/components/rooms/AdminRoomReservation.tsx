@@ -19,17 +19,14 @@ export default function AdminRoomReservation() {
   const [petFriendlyFilter, setPetFriendlyFilter] = useState("");
   const [reservedFilter, setReservedFilter] = useState("");
 
-  // Buscar hóspedes
   useEffect(() => {
     fetch("/api/users")
       .then((res) => res.json())
       .then((data) => {
-        console.log("Usuários retornados:", data);
         setUsers(data);
       });
   }, []);
 
-  // Buscar quartos
   async function handleSearch(e: React.FormEvent) {
     e.preventDefault();
     setError("");
@@ -82,6 +79,18 @@ export default function AdminRoomReservation() {
         phone: guest?.phone || "",
       }),
     });
+
+    if (res.ok) {
+      setMessage("Reserva criada com sucesso!");
+      setSelectedRoom(null);
+      setRooms([]);
+      setUserId("");
+      setCheckIn("");
+      setCheckOut("");
+      setGuests(1);
+    } else {
+      setMessage("Erro ao criar reserva.");
+    }
   }
 
   return (
@@ -157,6 +166,7 @@ export default function AdminRoomReservation() {
         </Button>
       </form>
       {error && <Text className="text-red-600">{error}</Text>}
+      {message && <Text className="text-green-700 mb-2">{message}</Text>}
 
       {rooms.length > 0 && (
         <div className="flex flex-col gap-2 mb-4">
@@ -247,7 +257,6 @@ export default function AdminRoomReservation() {
             >
               Criar reserva
             </Button>
-            {message && <Text className="mt-2">{message}</Text>}
           </form>
         </Card>
       )}
