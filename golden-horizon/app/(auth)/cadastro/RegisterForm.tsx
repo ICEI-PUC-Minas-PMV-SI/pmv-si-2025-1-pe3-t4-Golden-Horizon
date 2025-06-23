@@ -1,14 +1,14 @@
 "use client";
 
 import FormInput from "@/components/formInput/FormInput";
-import { Button, Select, Text } from "@geist-ui/react";
+import { Button, Text } from "@geist-ui/react";
 import Form from "next/form";
 import Link from "next/link";
 import registerAction from "./registerAction";
 import { useActionState, useEffect } from "react";
 
 export default function RegisterForm() {
-  const [state, formAction, isPending] = useActionState(registerAction, null);
+  const [state, formAction] = useActionState(registerAction, null);
 
   useEffect(() => {
     if (state?.success) {

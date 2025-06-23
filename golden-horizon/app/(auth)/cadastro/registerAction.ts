@@ -1,7 +1,7 @@
 "use server";
 
 import db from "@/lib/prisma";
-import { randomBytes, scryptSync } from "crypto";
+import bcrypt from "bcryptjs";
 
 export default async function RegisterAction(
   _prevState: unknown,
@@ -54,9 +54,11 @@ export default async function RegisterAction(
     };
   }
 
-  const salt = randomBytes(16).toString("hex");
-  const hashedPassword = scryptSync(password, salt, 64).toString("hex");
-  const passwordToStore = `${salt}:${hashedPassword}`;
+  // const salt = randomBytes(16).toString("hex");
+  // const hashedPassword = scryptSync(password, salt, 64).toString("hex");
+
+  const hashedPassword = bcrypt.hashSync(password, 10);
+  // const passwordToStore = `${salt}:${hashedPassword}`;
 
   await db.user.create({
     data: {
@@ -64,7 +66,7 @@ export default async function RegisterAction(
       lastName,
       email,
       phone,
-      password: passwordToStore,
+      password: hashedPassword,
       role: role === "admin" ? "admin" : "user",
     },
   });

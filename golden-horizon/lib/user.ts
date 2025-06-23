@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import db from "./prisma";
-import { scryptSync } from "crypto";
+import bcrypt from "bcryptjs";
 
 export type User = {
   id: string;
@@ -25,16 +25,11 @@ export const getUserByCredentials = async (
 ): Promise<Omit<User, "password"> | null> => {
   const user = await getUserByEmail(email);
 
-  if (!user) {
-    return null;
-  }
+  if (!user) return null;
 
-  const [salt, hashedPassword] = user.password?.split(":");
-  const hashedInputPassword = scryptSync(password, salt, 64).toString("hex");
-
-  if (hashedInputPassword === hashedPassword) {
+  const isMatch = bcrypt.compareSync(password, user.password);
+  if (isMatch) {
     const { password, ...userWithoutPassword } = user;
-
     return userWithoutPassword;
   }
 

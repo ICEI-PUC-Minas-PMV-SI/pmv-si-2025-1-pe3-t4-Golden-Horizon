@@ -1,6 +1,3 @@
-import type { User } from "@/lib/user";
-import type { Session } from "next-auth";
-
 import NextAuth from "next-auth";
 import Credentials from "next-auth/providers/credentials";
 import { getUserByCredentials } from "@/lib/user";
@@ -12,23 +9,19 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         email: {},
         password: {},
       },
-      authorize: async (
-        credentials,
-      ): Promise<Omit<User, "password"> | null> => {
+      authorize: async (credentials) => {
         const user = await getUserByCredentials(
           credentials.email as string,
           credentials.password as string,
         );
         if (!user) return null;
-
-        // Remove a senha e garante que id é string
         return { ...user, id: String(user.id) };
       },
     }),
   ],
   session: {
     strategy: "jwt",
-    maxAge: 60 * 60 * 24, //1 dia
+    maxAge: 60 * 60 * 24, // 1 dia
   },
   callbacks: {
     async jwt({ token, user }) {
@@ -37,6 +30,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         token.role = user.role;
         token.firstName = user.firstName;
         token.lastName = user.lastName;
+        token.phone = user.phone;
       }
       return token;
     },
@@ -47,6 +41,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         role: token.role as string,
         firstName: token.firstName as string,
         lastName: token.lastName as string,
+        phone: token.phone as string,
       };
       session.remember =
         typeof token.remember === "boolean" ? token.remember : undefined;
