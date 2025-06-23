@@ -20,4 +20,37 @@ model User {
   lastName     String   @map("last_name")
   password     String
   createdAt    DateTime @default(now()) @map("created_at")
+  reservations Reservation[]
+}
+
+model Room {
+  id           String   @id @default(uuid())
+  beds         Int
+  breakfast    Boolean  @default(false)
+  netflix      Boolean  @default(false)
+  internet     Boolean  @default(false)
+  suite        Boolean  @default(false)
+  petFriendly  Boolean  @default(false) @map("pet_friendly")
+  price        Float
+  promoPrice   Float?   @map("promo_price")
+  reserved     Boolean  @default(false)
+  description  String
+  createdAt    DateTime @default(now()) @map("created_at")
+  reservations Reservation[]
+}
+
+model Reservation {
+  id           String   @id @default(cuid())
+  name         String
+  email        String
+  phone        String
+  checkIn      DateTime
+  checkOut     DateTime
+  guests       Int
+  room         Room     @relation(fields: [roomId], references: [id])
+  roomId       String
+  user         User?    @relation(fields: [userId], references: [id])
+  userId       String?  
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
 }
