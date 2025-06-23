@@ -5,8 +5,6 @@ import NextAuth from "next-auth";
 import Credentials from "next-auth/providers/credentials";
 import { getUserByCredentials } from "@/lib/user";
 
-type SessionWithRemember = Session & { remember?: boolean };
-
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
     Credentials({
@@ -34,22 +32,25 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   },
   callbacks: {
     async jwt({ token, user }) {
-      const u = user as typeof user & { remember?: boolean };
-      if (u && typeof u.remember !== "undefined") {
-        token.remember = u.remember;
-        if (u.remember) {
-          token.exp = Math.floor(Date.now() / 1000) + 60 * 60 * 24 * 30;
-        }
+      if (user) {
+        token.id = user.id;
+        token.role = user.role;
+        token.firstName = user.firstName;
+        token.lastName = user.lastName;
       }
       return token;
     },
     async session({ session, token }) {
-      const s: SessionWithRemember = {
-        ...session,
-        remember:
-          typeof token.remember === "boolean" ? token.remember : undefined,
+      session.user = {
+        ...session.user,
+        id: token.id as string,
+        role: token.role as string,
+        firstName: token.firstName as string,
+        lastName: token.lastName as string,
       };
-      return s;
+      session.remember =
+        typeof token.remember === "boolean" ? token.remember : undefined;
+      return session;
     },
   },
 });

@@ -14,7 +14,7 @@ export default function LoginBtn() {
     return (
       <div className="flex items-center space-x-4">
         <Button
-          className="btn"
+          className="!bg-[#7C6A46] !text-white !font-bold hover:!bg-amber-700 !border-none !mr-5"
           onClick={() => {
             window.location.href = "/minha-conta";
           }}

@@ -1,14 +1,20 @@
 "use client";
 
 import FormInput from "@/components/formInput/FormInput";
-import { Button, Text } from "@geist-ui/react";
+import { Button, Select, Text } from "@geist-ui/react";
 import Form from "next/form";
 import Link from "next/link";
 import registerAction from "./registerAction";
-import { useActionState } from "react";
+import { useActionState, useEffect } from "react";
 
 export default function RegisterForm() {
   const [state, formAction, isPending] = useActionState(registerAction, null);
+
+  useEffect(() => {
+    if (state?.success) {
+      window.location.href = "/dashboard";
+    }
+  }, [state]);
 
   return (
     <>
@@ -52,6 +58,11 @@ export default function RegisterForm() {
           name="phone"
           type="tel"
         />
+
+        <select name="role" className="!mt-5">
+          <option value="user">Usuário comum</option>
+          <option value="admin">Administrador</option>
+        </select>
 
         <div className="flex !my-[40px] justify-between">
           <Button
