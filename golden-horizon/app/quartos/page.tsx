@@ -1,14 +1,19 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
+/* eslint-disable @next/next/no-img-element */
 import { Room } from "@/interfaces/room";
 import { getRandomRoomImage } from "@/utils/room.utils";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Card } from "rsuite";
 
 export default function RoomsPage() {
   const [rooms, setRooms] = useState<Room[]>([]);
   const router = useRouter();
+  const searchParams = useSearchParams();
+
+  const checkIn = searchParams.get("checkIn");
+  const checkOut = searchParams.get("checkOut");
+  const guests = searchParams.get("guests");
 
   useEffect(() => {
     fetch("/api/rooms")
@@ -23,7 +28,14 @@ export default function RoomsPage() {
   }, []);
 
   const handleCardClick = (roomId: string) => {
-    router.push(`/reservas?roomId=${roomId}`);
+    const params = new URLSearchParams();
+    params.set("roomId", roomId);
+
+    if (checkIn) params.set("checkIn", checkIn);
+    if (checkOut) params.set("checkOut", checkOut);
+    if (guests) params.set("guests", guests);
+
+    router.push(`/reservas?${params.toString()}`);
   };
 
   return (
@@ -33,7 +45,7 @@ export default function RoomsPage() {
           key={index}
           style={{
             width: 320,
-            border: "1px solid #e5e7eb", // light gray border
+            border: "1px solid #e5e7eb",
             borderRadius: 8,
             transition: "transform 0.2s, box-shadow 0.2s",
           }}
@@ -55,8 +67,7 @@ export default function RoomsPage() {
           <Card.Header className="mx-3">
             <h5>{room.description}</h5>
           </Card.Header>
-          <Card.Body className="space-y-1 mx-3 ">
-            {" "}
+          <Card.Body className="space-y-1 mx-3">
             <p className="text-sm">
               <strong>Camas:</strong> {room.beds}
             </p>

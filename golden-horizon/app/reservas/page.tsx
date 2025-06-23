@@ -19,7 +19,11 @@ export default function ReservesPage() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const [, setToast] = useToasts();
+
   const roomId = searchParams.get("roomId") || "desconhecido";
+  const checkInParam = searchParams.get("checkIn");
+  const checkOutParam = searchParams.get("checkOut");
+  const guestsParam = searchParams.get("guests");
 
   const {
     handleSubmit,
@@ -32,9 +36,9 @@ export default function ReservesPage() {
       name: "",
       email: "",
       phone: "",
-      checkIn: null,
-      checkOut: null,
-      guests: 1,
+      checkIn: checkInParam ? new Date(checkInParam) : null,
+      checkOut: checkOutParam ? new Date(checkOutParam) : null,
+      guests: guestsParam ? parseInt(guestsParam) : 1,
     },
     mode: "onChange",
   });
@@ -75,8 +79,6 @@ export default function ReservesPage() {
         setTimeout(() => {
           router.push("/reserva-sucesso");
         }, 1500);
-
-        return;
       } else {
         setToast({
           text: "Erro ao enviar a reserva.",
