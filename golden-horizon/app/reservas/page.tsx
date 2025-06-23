@@ -104,144 +104,183 @@ export default function ReservesPage() {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded shadow">
-      <h2 className="text-2xl mb-6 font-semibold">Reservar Quarto</h2>
+    <div className="flex justify-center items-center min-h-[80vh]">
+      <div className="w-full max-w-lg bg-white rounded-2xl shadow-xl p-8 border border-none">
+        <h2 className="text-3xl font-bold text-amber-700 mb-6 text-center">
+          Reservar Quarto
+        </h2>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-        <FormGroup>
-          <label>Nome</label>
-          <Controller
-            name="name"
-            control={control}
-            rules={{ required: "O nome é obrigatório" }}
-            render={({ field }) => (
-              <Input
-                value={field.value}
-                onChange={(value: string) => field.onChange(value)}
-              />
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+          <FormGroup>
+            <label className="block font-semibold text-gray-700 mb-1">
+              Nome
+            </label>
+            <Controller
+              name="name"
+              control={control}
+              rules={{ required: "O nome é obrigatório" }}
+              render={({ field }) => (
+                <Input
+                  className="w-full"
+                  value={field.value}
+                  onChange={(value: string) => field.onChange(value)}
+                  placeholder="Digite seu nome completo"
+                />
+              )}
+            />
+            {errors.name && (
+              <p className="text-red-500 text-xs mt-1">{errors.name.message}</p>
             )}
-          />
-          {errors.name && (
-            <p className="text-red-500 text-sm">{errors.name.message}</p>
-          )}
-        </FormGroup>
+          </FormGroup>
 
-        <FormGroup>
-          <label>Email</label>
-          <Controller
-            name="email"
-            control={control}
-            rules={{
-              required: "O email é obrigatório",
-              pattern: {
-                value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                message: "Formato de email inválido",
-              },
-            }}
-            render={({ field }) => (
-              <Input
-                type="email"
-                value={field.value}
-                onChange={(value: string) => field.onChange(value)}
-              />
+          <FormGroup>
+            <label className="block font-semibold text-gray-700 mb-1">
+              Email
+            </label>
+            <Controller
+              name="email"
+              control={control}
+              rules={{
+                required: "O email é obrigatório",
+                pattern: {
+                  value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                  message: "Formato de email inválido",
+                },
+              }}
+              render={({ field }) => (
+                <Input
+                  className="w-full"
+                  type="email"
+                  value={field.value}
+                  onChange={(value: string) => field.onChange(value)}
+                  placeholder="seu@email.com"
+                />
+              )}
+            />
+            {errors.email && (
+              <p className="text-red-500 text-xs mt-1">
+                {errors.email.message}
+              </p>
             )}
-          />
-          {errors.email && (
-            <p className="text-red-500 text-sm">{errors.email.message}</p>
-          )}
-        </FormGroup>
+          </FormGroup>
 
-        <FormGroup>
-          <label>Telefone</label>
-          <Controller
-            name="phone"
-            control={control}
-            rules={{ required: "O telefone é obrigatório" }}
-            render={({ field }) => (
-              <Input
-                value={field.value}
-                onChange={(value: string) => field.onChange(value)}
-              />
+          <FormGroup>
+            <label className="block font-semibold text-gray-700 mb-1">
+              Telefone
+            </label>
+            <Controller
+              name="phone"
+              control={control}
+              rules={{ required: "O telefone é obrigatório" }}
+              render={({ field }) => (
+                <Input
+                  className="w-full"
+                  value={field.value}
+                  onChange={(value: string) => field.onChange(value)}
+                  placeholder="(99) 99999-9999"
+                />
+              )}
+            />
+            {errors.phone && (
+              <p className="text-red-500 text-xs mt-1">
+                {errors.phone.message}
+              </p>
             )}
-          />
-          {errors.phone && (
-            <p className="text-red-500 text-sm">{errors.phone.message}</p>
-          )}
-        </FormGroup>
+          </FormGroup>
 
-        <FormGroup>
-          <label>Data de Entrada</label>
-          <Controller
-            name="checkIn"
-            control={control}
-            rules={{ required: "A data de entrada é obrigatória" }}
-            render={({ field }) => (
-              <DatePicker
-                value={field.value}
-                onChange={(value) => field.onChange(value ?? null)}
-                placeholder="Selecione a data"
-                oneTap
-                style={{ width: "100%" }}
+          <div className="flex gap-4">
+            <FormGroup className="flex-1">
+              <label className="block font-semibold text-gray-700 mb-1">
+                Data de Entrada
+              </label>
+              <Controller
+                name="checkIn"
+                control={control}
+                rules={{ required: "A data de entrada é obrigatória" }}
+                render={({ field }) => (
+                  <DatePicker
+                    value={field.value}
+                    onChange={(value) => field.onChange(value ?? null)}
+                    placeholder="Selecione a data"
+                    oneTap
+                    style={{ width: "100%" }}
+                  />
+                )}
               />
-            )}
-          />
-          {errors.checkIn && (
-            <p className="text-red-500 text-sm">{errors.checkIn.message}</p>
-          )}
-        </FormGroup>
+              {errors.checkIn && (
+                <p className="text-red-500 text-xs mt-1">
+                  {errors.checkIn.message}
+                </p>
+              )}
+            </FormGroup>
 
-        <FormGroup>
-          <label>Data de Saída</label>
-          <Controller
-            name="checkOut"
-            control={control}
-            rules={{ required: "A data de saída é obrigatória" }}
-            render={({ field }) => (
-              <DatePicker
-                value={field.value}
-                onChange={(value) => field.onChange(value ?? null)}
-                placeholder="Selecione a data"
-                oneTap
-                style={{ width: "100%" }}
+            <FormGroup className="flex-1">
+              <label className="block font-semibold text-gray-700 mb-1">
+                Data de Saída
+              </label>
+              <Controller
+                name="checkOut"
+                control={control}
+                rules={{ required: "A data de saída é obrigatória" }}
+                render={({ field }) => (
+                  <DatePicker
+                    value={field.value}
+                    onChange={(value) => field.onChange(value ?? null)}
+                    placeholder="Selecione a data"
+                    oneTap
+                    style={{ width: "100%" }}
+                  />
+                )}
               />
+              {errors.checkOut && (
+                <p className="text-red-500 text-xs mt-1">
+                  {errors.checkOut.message}
+                </p>
+              )}
+            </FormGroup>
+          </div>
+
+          <FormGroup>
+            <label className="block font-semibold text-gray-700 mb-1">
+              Quantidade de Hóspedes
+            </label>
+            <Controller
+              name="guests"
+              control={control}
+              rules={{ required: "Informe o número de hóspedes" }}
+              render={({ field }) => (
+                <InputNumber
+                  value={field.value}
+                  min={1}
+                  max={10}
+                  onChange={(value) => field.onChange(value ?? 1)}
+                  style={{ width: "100%" }}
+                />
+              )}
+            />
+            {errors.guests && (
+              <p className="text-red-500 text-xs mt-1">
+                {errors.guests.message}
+              </p>
             )}
-          />
-          {errors.checkOut && (
-            <p className="text-red-500 text-sm">{errors.checkOut.message}</p>
-          )}
-        </FormGroup>
+          </FormGroup>
 
-        <FormGroup>
-          <label>Quantidade de Hóspedes</label>
-          <Controller
-            name="guests"
-            control={control}
-            rules={{ required: "Informe o número de hóspedes" }}
-            render={({ field }) => (
-              <InputNumber
-                value={field.value}
-                min={1}
-                max={10}
-                onChange={(value) => field.onChange(value ?? 1)}
-                style={{ width: "100%" }}
-              />
-            )}
-          />
-          {errors.guests && (
-            <p className="text-red-500 text-sm">{errors.guests.message}</p>
-          )}
-        </FormGroup>
+          <div className="bg-amber-50 rounded p-3 text-sm text-gray-700 mb-2">
+            <strong>ID do Quarto:</strong>{" "}
+            <span className="text-amber-700">{roomId}</span>
+          </div>
 
-        <FormGroup>
-          <p>
-            <strong>ID do Quarto:</strong> {roomId}
-          </p>
-        </FormGroup>
-
-        <Button appearance="primary" type="submit" block disabled={!isValid}>
-          Confirmar Reserva
-        </Button>
-      </form>
+          <Button
+            appearance="primary"
+            type="submit"
+            block
+            disabled={!isValid}
+            className="!bg-amber-600 !text-white !font-semibold !rounded-lg !py-3 !text-lg hover:!bg-amber-700 transition"
+          >
+            Confirmar Reserva
+          </Button>
+        </form>
+      </div>
     </div>
   );
 }
