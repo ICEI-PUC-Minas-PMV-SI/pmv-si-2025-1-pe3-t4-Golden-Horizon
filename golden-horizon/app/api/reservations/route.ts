@@ -5,6 +5,7 @@ import { NextResponse, NextRequest } from "next/server";
 export async function POST(req: Request) {
   try {
     const data = await req.json();
+    console.log("Payload recebido:", data);
 
     const reservation = await prisma.reservation.create({
       data: {
@@ -21,7 +22,7 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ success: true, reservation }, { status: 201 });
   } catch (err) {
-    console.error("API reservation error:", err);
+    console.error("Erro ao criar reserva:", err);
     return NextResponse.json(
       { error: "Failed to create reservation" },
       { status: 500 },

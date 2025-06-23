@@ -58,7 +58,16 @@ export default function ReservesPage() {
 
     clearErrors();
 
-    const payload = { ...data, roomId };
+    const payload = {
+      name: data.name,
+      email: data.email,
+      phone: data.phone,
+      checkIn: data.checkIn ? data.checkIn.toISOString() : null,
+      checkOut: data.checkOut ? data.checkOut.toISOString() : null,
+      guests: data.guests,
+      roomId: roomId,
+      userId: null, // Usuário público, não logado
+    };
 
     try {
       const res = await fetch("/api/reservations", {
