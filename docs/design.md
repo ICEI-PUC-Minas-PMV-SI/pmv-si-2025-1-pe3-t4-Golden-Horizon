@@ -158,10 +158,9 @@ Ao rolar a página, o usuário tem acesso a mais informações relevantes, como 
 #### Quartos
 
 ##### Objetivo da Tela
-A página de Quartos mostra detalhes sobre os quartos, com fotos, descrições, informações sobre serviços e amenidades, bem como comentátios de clientes. 
-O usuário pode também iniciar o processo de reserva nesta tela. Ao final da página há informações sobre outros tipos de quartos disponíveis.
+A página de Quartos mostra informações sobre os tipos de quartos oferecidos. As informações sobre cada quarto são resumidas em cards. Aqui o usuário pode selecionar o quarto de seu interesse, clicando no botão de reserva.
 
-![Rooms](./quartos.jpeg)
+![Rooms](./quartos.png)
 
 ---
 #### Ofertas
@@ -189,6 +188,11 @@ A página de contatos visa facilitar o processo do cliente entrar em contato com
 ![Contato PNG](./contact%20us.png)  
 
 #### Reserva
+
+##### Objetivo da Tela
+A página de Reserva mostra detalhes sobre o quarto selecionado, com fotos, descrições, informações sobre serviços e amenidades, bem como comentátios de clientes. 
+O usuário pode também iniciar o processo de reserva nesta tela. Ao final da página há informações sobre outros tipos de quartos disponíveis.
+
 ![Reserva](./Reservas.png)
 
 #### Eventos
