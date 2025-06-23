@@ -1,6 +1,7 @@
 import { Text, Button } from "@geist-ui/react";
 import { useState } from "react";
 import NewRoomForm from "@/components/newRoomForm/NewRoomForm";
+import ReservationsTable from "../reservationTable/ReservationsTable";
 
 export default function DashboardAdmin({ userName }: { userName: string }) {
   const [activeSection, setActiveSection] = useState<
@@ -15,7 +16,7 @@ export default function DashboardAdmin({ userName }: { userName: string }) {
 
   return (
     <div className="flex flex-col items-center justify-start min-h-[80vh] bg-[#f8f8f8] py-10">
-      <div className="w-full max-w-2xl bg-white rounded-xl shadow-lg p-8">
+      <div className="w-fullmax-w-full bg-white rounded-xl shadow-lg p-8">
         <Text h2 className="mb-2 text-center">
           Bem-vindo, {userName}!
         </Text>
@@ -73,11 +74,7 @@ export default function DashboardAdmin({ userName }: { userName: string }) {
 
         {/* Renderização condicional das seções */}
         {activeSection === "addRoom" && <NewRoomForm />}
-        {activeSection === "reservations" && (
-          <div className="text-center text-gray-500">
-            [Reservas ativas aqui]
-          </div>
-        )}
+        {activeSection === "reservations" && <ReservationsTable />}
         {activeSection === "searchRoom" && (
           <div className="text-center text-gray-500">
             [Consulta de quarto aqui]
