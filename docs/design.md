@@ -147,30 +147,66 @@ O protótipo funcional do site pode ser acessado por meio do link abaixo:
 As imagens correspondentes às páginas do site estão listadas abaixo:
 
 #### Página Inicial (Home)
+
+##### Objetivo da Tela
+A tela inicial do site visa apresentae de prontidão as informações mais relevantes sobre o hotel e a navegação do site. Ao entrar, o usuário pode ver o menu de navegação no topo, links para as páginas de reserva e para um vídeo-tour, e um menu que agiliza o processo de reserva de quartos.
+Ao rolar a página, o usuário tem acesso a mais informações relevantes, como serviços oferecidos pelo hotel, detalhes sobre os quartos e testemunhos de clientes.
+
 ![Home](./Homepage.png)
 
+---
 #### Quartos
-![Rooms](./quartos.jpeg)
 
+##### Objetivo da Tela
+A página de Quartos mostra informações sobre os tipos de quartos oferecidos. As informações sobre cada quarto são resumidas em cards. Aqui o usuário pode selecionar o quarto de seu interesse, clicando no botão de reserva.
+
+![Rooms](./quartos.png)
+
+---
 #### Ofertas
+
+##### Objetivo da Tela
+A página de Ofertas dispõe informações sobre oportunidades de desconto oferecidas pelo hotel. Cada oferta é representada por um card, com uma foto do quarto, informações sobre o tipo de quarto, sua avaliação, seu preço base e o desconto atual, bem como a quantidade de noites disponíveis.
+
 ![Ofertas](./Ofertas.png)
 
-#### Login
+---
+#### Login e Cadastro
+
+##### Objetivo da Tela
+A páginas de Login e Cadastro apresentam um layout simples, dando destaque apenas ao formulário necessário ao processo.
+
 ![Login](./Login.png)
 
-#### Cadastro
 ![Cadastro](./Registion.png)
 
 #### Contatos
+
+##### Objetivo da Tela
+A página de contatos visa facilitar o processo do cliente entrar em contato com o hotel. A página não só exibe informações básicas como telefones, endereço de email e links para mídias sociais, mas também oferece funcionalidades para que o usuário envie mensagens via Whatsapp, ou para que envie um email preenchendo um formulário simples.
+
 ![Contato PNG](./contact%20us.png)  
 
 #### Reserva
+
+##### Objetivo da Tela
+A página de Reserva mostra detalhes sobre o quarto selecionado, com fotos, descrições, informações sobre serviços e amenidades, bem como comentátios de clientes. 
+O usuário pode também iniciar o processo de reserva nesta tela. Ao final da página há informações sobre outros tipos de quartos disponíveis.
+
 ![Reserva](./Reservas.png)
 
 #### Eventos
+
+##### Objetivo de Tela
+A página de Eventos exibe informações sucintas sobre os espaços do hotel que podem ser reservados para eventos. Um vídeo tour, bem como o destaque de belas imagens destes espaços visam instigar potenciais clientes.
+
 ![Eventos](./Eventos.png)
 
 #### Pagamento
+
+##### Objetivo da Tela
+A página de Pagamentos visa oferecer uma experiência clara e de fácil navegação, sem abrir mão da identidade visual do site. Informações e formulários são agrupados em caixas, tornando sua exibição organizada, direta e elegante.
+
 ![Pagamento](./checkout.jpeg)
 
 
