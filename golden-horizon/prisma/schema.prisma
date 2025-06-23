@@ -20,4 +20,5 @@ model User {
   lastName     String   @map("last_name")
   password     String
   createdAt    DateTime @default(now()) @map("created_at")
+  role         String   @default("user")
 }

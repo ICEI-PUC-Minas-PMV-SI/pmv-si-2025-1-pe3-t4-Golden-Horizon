@@ -16,9 +16,11 @@ export default async function RegisterAction(
     password: string;
     confirmPassword: string;
     phone: string;
+    role?: string;
   };
 
-  const { firstName, lastName, email, password, phone, confirmPassword } = data;
+  const { firstName, lastName, email, password, phone, confirmPassword, role } =
+    data;
 
   if (!firstName || !lastName || !email || !password || !phone) {
     return {
@@ -63,6 +65,7 @@ export default async function RegisterAction(
       email,
       phone,
       password: passwordToStore,
+      role: role === "admin" ? "admin" : "user",
     },
   });
 
