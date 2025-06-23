@@ -1,7 +1,7 @@
 import { Text, Button } from "@geist-ui/react";
 import { useState } from "react";
 import NewRoomForm from "@/components/newRoomForm/NewRoomForm";
-import ActiveReservations from "../reservations/ActiveReservations";
+import ReservationsTable from "../reservationTable/ReservationsTable";
 import AdminRoomReservation from "../rooms/AdminRoomReservation";
 
 export default function DashboardAdmin({ userName }: { userName: string }) {
@@ -73,11 +73,7 @@ export default function DashboardAdmin({ userName }: { userName: string }) {
         </div>
 
         {activeSection === "addRoom" && <NewRoomForm />}
-        {activeSection === "reservations" && (
-          <div className="text-center text-gray-500">
-            <ActiveReservations />
-          </div>
-        )}
+        {activeSection === "reservations" && <ReservationsTable />}
         {activeSection === "searchRoom" && (
           <div className="text-center text-gray-500">
             <AdminRoomReservation />

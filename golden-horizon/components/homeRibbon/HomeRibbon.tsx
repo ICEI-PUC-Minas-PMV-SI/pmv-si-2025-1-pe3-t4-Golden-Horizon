@@ -1,8 +1,15 @@
 "use client";
 import { Play } from "@geist-ui/icons";
 import { Button } from "@geist-ui/react";
+import { useRouter } from "next/navigation";
 
 export default function HomeRibbon() {
+  const router = useRouter();
+
+  const handleReserveClick = () => {
+    router.push("/quartos");
+  };
+
   return (
     <div className="flex mt-10">
       <Button
@@ -15,6 +22,7 @@ export default function HomeRibbon() {
         placeholder={undefined}
         onPointerEnterCapture={undefined}
         onPointerLeaveCapture={undefined}
+        onClick={handleReserveClick}
       >
         Reserve agora
       </Button>

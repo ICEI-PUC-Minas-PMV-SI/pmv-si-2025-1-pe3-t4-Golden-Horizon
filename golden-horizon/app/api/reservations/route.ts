@@ -15,7 +15,7 @@ export async function POST(req: Request) {
         checkOut: new Date(data.checkOut),
         guests: data.guests,
         roomId: data.roomId,
-        userId: data.userId ?? null, // if available
+        userId: data.userId ?? null,
       },
     });
 
@@ -35,14 +35,40 @@ export async function GET(req: NextRequest) {
     return NextResponse.json([], { status: 403 });
   }
 
-  // Exemplo: considera reservas ativas as que ainda não passaram do check-out
-  const now = new Date();
-  const reservations = await prisma.reservation.findMany({
-    where: {
-      checkOut: { gte: now },
-    },
-    include: { room: true },
-  });
+  try {
+    // Reservas ativas: checkOut >= agora
+    const now = new Date();
+    const reservations = await prisma.reservation.findMany({
+      where: {
+        checkOut: { gte: now },
+      },
+      orderBy: { checkIn: "desc" },
+      include: {
+        room: {
+          select: { description: true },
+        },
+      },
+    });
 
-  return NextResponse.json(reservations);
+    // Formata o retorno
+    const formatted = reservations.map((r) => ({
+      id: r.id,
+      guestName: r.name,
+      email: r.email,
+      phone: r.phone,
+      checkIn: r.checkIn.toISOString(),
+      checkOut: r.checkOut.toISOString(),
+      guests: r.guests,
+      roomDescription: r.room?.description ?? "N/A",
+      userId: r.userId,
+    }));
+
+    return NextResponse.json(formatted);
+  } catch (err) {
+    console.error("API GET reservations error:", err);
+    return NextResponse.json(
+      { error: "Failed to fetch reservations" },
+      { status: 500 },
+    );
+  }
 }

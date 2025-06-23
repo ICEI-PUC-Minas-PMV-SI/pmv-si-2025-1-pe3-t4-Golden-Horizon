@@ -6,7 +6,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Card } from "rsuite";
 
-export default function RoomsPage() {
+export default function PromocoesPage() {
   const [rooms, setRooms] = useState<Room[]>([]);
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -19,7 +19,12 @@ export default function RoomsPage() {
     fetch("/api/rooms")
       .then((res) => res.json())
       .then((data: Room[]) => {
-        const roomsWithImages = data.map((room) => ({
+        // Filter only rooms with promoPrice
+        const promoRooms = data.filter(
+          (room) => room.promoPrice !== null && room.promoPrice !== undefined,
+        );
+
+        const roomsWithImages = promoRooms.map((room) => ({
           ...room,
           imageUrl: getRandomRoomImage(),
         }));
@@ -72,19 +77,10 @@ export default function RoomsPage() {
               <strong>Camas:</strong> {room.beds}
             </p>
             <p className="text-sm">
-              <strong>Preço:</strong>{" "}
-              {room.promoPrice ? (
-                <>
-                  <span className="line-through text-gray-500 mr-2">
-                    R$ {room.price.toFixed(2)}
-                  </span>
-                  <span className="text-green-600 font-semibold">
-                    R$ {room.promoPrice.toFixed(2)}
-                  </span>
-                </>
-              ) : (
-                <>R$ {room.price.toFixed(2)}</>
-              )}
+              <strong>Preço Promoção:</strong>{" "}
+              <span className="text-green-600 font-semibold">
+                R$ {room.promoPrice!.toFixed(2)}
+              </span>
             </p>
             <p className="text-sm">Internet: {room.internet ? "Sim" : "Não"}</p>
             <p className="text-sm">Netflix: {room.netflix ? "Sim" : "Não"}</p>
