@@ -4,44 +4,22 @@ const prisma = new PrismaClient();
 
 const usersData = [
   {
-    email: "Nigel_Hyatt@gmail.com",
-    phoneCountry: 572,
-    phone: "99996390",
-    firstName: "Damien",
-    lastName: "Wilderman",
-    password: "$2a$10$Ph9IEFRS1iJPov1h67F8reJ/inM2y3YM6r0t0n515m.PmGt4LU8I.",
+    email: "teste1@email.com",
+    phoneCountry: 55,
+    phone: "11999999999",
+    firstName: "Fulaninho",
+    lastName: "de Tal",
+    password: "$2b$10$eAAjG9oshC8MgU7WiMQyDeav62xsXamDInxgcZ2BCBxgggAXwjLze", // hash de 12345678
+    role: "user",
   },
   {
-    email: "Rose_Price-Buckridge81@yahoo.com",
-    phoneCountry: 412,
-    phone: "0000397",
-    firstName: "Mariah",
-    lastName: "Friesen",
-    password: "$2a$10$K/9V/kAwfIbxU5OgrYmkL..WlNo3yCEJzRjpI1UStMhQDogmEYIJ.",
-  },
-  {
-    email: "Virgil50@hotmail.com",
-    phoneCountry: 533,
-    phone: "0000000",
-    firstName: "Daren",
-    lastName: "Huels",
-    password: "$2a$10$QrEhQlm0YdzYMwrxDnRq0.hWYQNWV2bla1rFu3Dr29QmhPVG7guaS",
-  },
-  {
-    email: "Jarred_Kovacek66@yahoo.com",
-    phoneCountry: 288,
-    phone: "07788990",
-    firstName: "Geraldine",
-    lastName: "Rohan",
-    password: "$2a$10$m9YfcQ9ih4Omk0hiTFi0VO3R.vnAQnwSJh0U43T/2jeXVePg9eu7a",
-  },
-  {
-    email: "Baylee.Bosco@gmail.com",
-    phoneCountry: 591,
-    phone: "88885555",
-    firstName: "Kiley",
-    lastName: "O'Hara",
-    password: "$2a$10$ULBL5hpvrCuX7IF81UqTq.QE47TDnHlHuHfu9nrv4CctN2P8UtmGO",
+    email: "admin@email.com",
+    phoneCountry: 55,
+    phone: "11888888888",
+    firstName: "Administrador",
+    lastName: "da Silva",
+    password: "$2b$10$eAAjG9oshC8MgU7WiMQyDeav62xsXamDInxgcZ2BCBxgggAXwjLze", // hash de 12345678
+    role: "admin",
   },
 ];
 

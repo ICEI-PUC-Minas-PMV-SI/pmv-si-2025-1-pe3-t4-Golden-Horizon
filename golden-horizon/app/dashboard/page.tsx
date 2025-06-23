@@ -9,12 +9,15 @@ export default function DashboardPage() {
   if (status === "loading") return <p>Carregando...</p>;
   if (!session) return <p>Você precisa estar logado.</p>;
 
+  const DashboardContent =
+    session.user.role === "admin" ? DashboardAdmin : DashboardDefault;
+
   console.log("AAAAAA", session.user);
   const userName = session.user?.firstName || "usuário";
 
-  if (session.user.role === "admin") {
-    return <DashboardAdmin userName={userName} />;
-  }
-
-  return <DashboardDefault userName={userName} />;
+  return (
+    <main>
+      <DashboardContent userName={userName} />
+    </main>
+  );
 }

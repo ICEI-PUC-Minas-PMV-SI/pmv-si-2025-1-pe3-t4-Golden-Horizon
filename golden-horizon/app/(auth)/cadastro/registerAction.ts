@@ -54,11 +54,7 @@ export default async function RegisterAction(
     };
   }
 
-  // const salt = randomBytes(16).toString("hex");
-  // const hashedPassword = scryptSync(password, salt, 64).toString("hex");
-
   const hashedPassword = bcrypt.hashSync(password, 10);
-  // const passwordToStore = `${salt}:${hashedPassword}`;
 
   await db.user.create({
     data: {

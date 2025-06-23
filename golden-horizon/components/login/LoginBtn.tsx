@@ -16,7 +16,7 @@ export default function LoginBtn() {
         <Button
           className="!bg-[#7C6A46] !text-white !font-bold hover:!bg-amber-700 !border-none !mr-5"
           onClick={() => {
-            window.location.href = "/minha-conta";
+            window.location.href = "/dashboard";
           }}
           placeholder={undefined}
           onPointerEnterCapture={undefined}
