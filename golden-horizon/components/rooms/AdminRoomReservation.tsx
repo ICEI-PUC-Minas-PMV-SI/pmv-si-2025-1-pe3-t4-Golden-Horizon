@@ -66,6 +66,8 @@ export default function AdminRoomReservation() {
       setMessage("Quarto não selecionado.");
       return;
     }
+    const guest = users.find((u) => u.id === userId);
+
     const res = await fetch("/api/reservations", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -75,12 +77,11 @@ export default function AdminRoomReservation() {
         checkIn,
         checkOut,
         guests,
+        name: guest ? `${guest.firstName} ${guest.lastName}` : "",
+        email: guest?.email || "",
+        phone: guest?.phone || "",
       }),
     });
-    const data = await res.json();
-    setMessage(
-      data.success ? "Reserva criada com sucesso!" : "Erro ao criar reserva.",
-    );
   }
 
   return (
