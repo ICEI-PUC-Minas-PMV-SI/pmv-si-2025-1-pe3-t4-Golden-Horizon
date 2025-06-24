@@ -1,0 +1,22 @@
+{
+  "eslint.useFlatConfig": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.probe": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "prettier.enable": true,
+  "eslint.rules.customizations": [
+    { "rule": "prettier/prettier", "severity": "warn" }
+  ],
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 500,
+  "files.eol": "\n",
+  "prettier.endOfLine": "auto"
+}
